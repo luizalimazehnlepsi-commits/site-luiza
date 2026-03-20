@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicóloga Brasileira Online para o Exterior | Luiza Zehnle | CRP 03/20324</title>
+<meta name="description" content="Psicóloga brasileira que atende em português para quem vive fora do Brasil. Terapia online no seu fuso, com quem entende sua cultura. CRP 03/20324.">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J84C9ZE889"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J84C9ZE889');
+  gtag('config', 'AW-18023297873');
+</script>
+
+<link rel="icon" type="image/png" href="7.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="bg_1.jpeg">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #3a2e25;
+    background-color: #d7a858;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('bg_1.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+
+  /* LOGO */
+  .logo-bar {
+    text-align: center;
+    padding: 36px 0 20px;
+  }
+
+  .logo-bar img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(60,30,10,0.2));
+  }
+
+  /* CARD */
+  .card {
+    background: rgba(241,226,204,0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(60,30,10,0.22);
+  }
+
+  /* HERO */
+  .hero {
+    padding: 44px 36px 36px;
+    text-align: center;
+    border-bottom: 1px solid rgba(107,79,44,0.15);
+  }
+
+  .hero-flag { font-size: 26px; display: block; margin-bottom: 8px; }
+
+  .hero-tag {
+    display: inline-block;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: #4a7a70;
+    border: 1px solid rgba(74,122,112,0.35);
+    border-radius: 20px;
+    padding: 4px 14px; margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 38px);
+    font-weight: 700; color: #6b4f2c;
+    line-height: 1.25; margin-bottom: 14px;
+  }
+
+  .hero h1 em { font-style: italic; color: #a66767; }
+
+  .hero-desc {
+    font-size: 15px; color: #7a6a58;
+    line-height: 1.75; max-width: 460px;
+    margin: 0 auto 24px;
+  }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: #a66767; color: white;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px;
+    padding: 13px 24px; border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 16px rgba(166,103,103,0.35);
+    margin-bottom: 12px;
+  }
+
+  .btn-primary:hover { background: #8f5454; transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent; color: #6b4f2c;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+    padding: 9px 18px; border-radius: 10px;
+    border: 1.5px solid rgba(107,79,44,0.35);
+    text-decoration: none; transition: all 0.2s;
+  }
+
+  .btn-outline:hover { background: rgba(107,79,44,0.06); }
+
+  /* SEÇÕES */
+  .section { padding: 32px 36px; border-bottom: 1px solid rgba(107,79,44,0.12); }
+  .section-alt { background: rgba(107,79,44,0.04); }
+
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700;
+    color: #6b4f2c; margin-bottom: 18px; text-align: center;
+  }
+
+  /* RECONHECIMENTO */
+  .rec-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+  .rec-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    background: rgba(255,255,255,0.55);
+    border-left: 3px solid #4a7a70;
+    border-radius: 0 8px 8px 0;
+    padding: 11px 14px;
+    font-size: 14px; color: #3a2e25; line-height: 1.55;
+  }
+
+  .rec-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+  /* SOBRE MIM */
+  .sobre-row { display: flex; gap: 20px; align-items: flex-start; }
+
+  .sobre-row img {
+    width: 100px; height: 120px;
+    object-fit: cover; object-position: top;
+    border-radius: 10px; flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(60,30,10,0.18);
+  }
+
+  .sobre-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px; font-weight: 700;
+    color: #a66767; margin-bottom: 3px;
+  }
+
+  .sobre-crp {
+    font-size: 10px; font-weight: 600;
+    color: #7a6a58; letter-spacing: 0.12em;
+    text-transform: uppercase; display: block; margin-bottom: 10px;
+  }
+
+  .sobre-content p {
+    font-size: 13.5px; color: #3a2e25;
+    line-height: 1.7; margin-bottom: 12px;
+  }
+
+  .btn-traj {
+    display: inline-block;
+    font-size: 12px; font-weight: 600;
+    color: #a66767;
+    border: 1.5px solid rgba(166,103,103,0.4);
+    border-radius: 7px; padding: 6px 14px;
+    text-decoration: none; transition: all 0.2s;
+  }
+
+  .btn-traj:hover { background: rgba(166,103,103,0.08); }
+
+  /* PAÍSES */
+  .paises {
+    display: flex; flex-wrap: wrap;
+    gap: 7px; justify-content: center;
+    margin: 4px 0 12px;
+  }
+
+  .pais-tag {
+    background: rgba(255,255,255,0.65);
+    border-radius: 20px; padding: 4px 12px;
+    font-size: 12px; color: #6b4f2c; font-weight: 600;
+  }
+
+  .paises-sub { font-size: 12px; color: #7a6a58; text-align: center; margin-top: 4px; }
+
+  /* COMO FUNCIONA */
+  .steps { display: flex; flex-direction: column; gap: 16px; }
+
+  .step { display: flex; align-items: flex-start; gap: 14px; }
+
+  .step-num {
+    width: 30px; height: 30px;
+    background: #a66767; color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700; flex-shrink: 0;
+  }
+
+  .step-strong { display: block; font-size: 13.5px; font-weight: 600; color: #6b4f2c; margin-bottom: 2px; }
+  .step-span { font-size: 12.5px; color: #7a6a58; line-height: 1.55; }
+
+  /* DIFERENCIAIS */
+  .dif-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+  .dif-item {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.55);
+    border-radius: 7px; padding: 8px 12px;
+    font-size: 12.5px; color: #3a2e25;
+  }
+
+  .dif-check { color: #4a7a70; font-size: 13px; flex-shrink: 0; }
+
+  /* FAQ */
+  details {
+    background: rgba(255,255,255,0.55);
+    border-radius: 8px; margin-bottom: 7px; overflow: hidden;
+  }
+
+  summary {
+    padding: 13px 16px;
+    font-size: 13.5px; font-weight: 600; color: #6b4f2c;
+    cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+    transition: background 0.15s;
+  }
+
+  summary:hover { background: rgba(255,255,255,0.4); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-size: 18px; color: #a66767; flex-shrink: 0; margin-left: 12px; }
+  details[open] summary::after { content: '−'; }
+
+  .faq-body {
+    padding: 12px 16px 13px;
+    font-size: 13px; color: #3a2e25; line-height: 1.7;
+    border-top: 1px solid rgba(107,79,44,0.1);
+  }
+
+  /* CTA FINAL */
+  .cta-final { padding: 36px; text-align: center; background: #6b4f2c; }
+
+  .cta-final h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; color: #f1e2cc;
+    line-height: 1.35; margin-bottom: 10px; font-weight: 700;
+  }
+
+  .cta-final p { font-size: 13px; color: rgba(241,226,204,0.7); margin-bottom: 22px; line-height: 1.65; }
+
+  .btn-wpp {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: #25D366; color: white;
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 15px;
+    padding: 13px 26px; border-radius: 10px;
+    text-decoration: none; transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+
+  .btn-wpp:hover { background: #20bd5a; transform: translateY(-2px); }
+
+  .cta-safe { font-size: 10px; color: rgba(241,226,204,0.45); display: block; margin-top: 12px; }
+
+  /* FOOTER */
+  .footer { text-align: center; padding: 20px; font-size: 10px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+  /* FLOAT WPP */
+  .float-wpp {
+    position: fixed; bottom: 22px; right: 22px; z-index: 50;
+    background: #25D366; color: white;
+    width: 54px; height: 54px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    text-decoration: none; transition: transform 0.2s;
+  }
+
+  .float-wpp:hover { transform: scale(1.08); }
+
+  /* MOBILE */
+  @media (max-width: 560px) {
+    .section { padding: 28px 20px; }
+    .hero { padding: 36px 20px 28px; }
+    .cta-final { padding: 28px 20px; }
+    .sobre-row { flex-direction: column; align-items: center; text-align: center; }
+    .sobre-row img { width: 120px; height: 144px; }
+    .dif-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="logo-bar">
+    <a href="https://www.luizazehnle.com">
+      <img src="LOGO_LUIZA.png" alt="Luiza Lima Zehnle" fetchpriority="high">
+    </a>
+  </div>
+
+  <div class="card">
+
+    <!-- HERO -->
+    <div class="hero">
+      <span class="hero-flag">🇧🇷</span>
+      <span class="hero-tag">Psicóloga Brasileira · Atendo Qualquer País</span>
+      <h1>Tem coisas que só<br>se dizem na<br><em>língua da gente.</em></h1>
+      <p class="hero-desc">Psicoterapia em português para brasileiros que vivem fora do Brasil — no seu fuso, com quem entende sua cultura de dentro.</p>
+
+      <a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=exterior&utm_content=hero&text=Olá,%20Luiza!%20Moro%20fora%20do%20Brasil%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa."
+         onclick="gtag('event','conversion',{'send_to':'AW-18023297873'})"
+         target="_blank"
+         class="btn-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        Quero agendar uma primeira conversa
+      </a>
+
+      <br><br>
+
+      <a href="https://www.luizazehnle.com" target="_blank" class="btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        Conheça mais sobre o meu trabalho
+      </a>
+    </div>
+
+    <!-- RECONHECIMENTO -->
+    <div class="section">
+      <h2>Você se reconhece aqui?</h2>
+      <ul class="rec-list">
+        <li><span class="rec-icon">🏠</span>Saudade da família e das coisas simples de casa</li>
+        <li><span class="rec-icon">🌐</span>Dificuldade de fazer terapia em outro idioma — as palavras não saem como deveriam</li>
+        <li><span class="rec-icon">🧭</span>Sensação de não pertencer completamente a nenhum dos dois lugares</li>
+        <li><span class="rec-icon">🤯</span>A vida que você idealizou fora do Brasil é diferente da que encontrou</li>
+        <li><span class="rec-icon">💑</span>Relacionamentos abalados pela distância ou pelo choque cultural</li>
+        <li><span class="rec-icon">😶</span>Ninguém ao redor entende completamente o que é ser brasileiro vivendo fora</li>
+      </ul>
+    </div>
+
+    <!-- SOBRE MIM -->
+    <div class="section section-alt">
+      <h2>Sobre Mim</h2>
+      <div class="sobre-row">
+        <img src="luiza.webp" alt="Luiza Lima Zehnle">
+        <div class="sobre-content">
+          <h3>Olá, sou Luiza</h3>
+          <span class="sobre-crp">Psicóloga Baiana · CRP 03/20324 · 8 anos de experiência</span>
+          <p>Sou brasileira, baiana, e atendo brasileiros que vivem em qualquer lugar do mundo. Especialista em Psicoterapia Junguiana, trabalho com as especificidades de quem constrói vida fora do Brasil — a identidade dividida, a saudade, o estranhamento e a reinvenção que vem com isso.</p>
+          <a href="https://www.luizazehnle.com" target="_blank" class="btn-traj">Conheça minha trajetória</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAÍSES -->
+    <div class="section">
+      <h2>Atendo brasileiros em</h2>
+      <div class="paises">
+        <span class="pais-tag">🇵🇹 Portugal</span>
+        <span class="pais-tag">🇺🇸 Estados Unidos</span>
+        <span class="pais-tag">🇩🇪 Alemanha</span>
+        <span class="pais-tag">🇬🇧 Reino Unido</span>
+        <span class="pais-tag">🇫🇷 França</span>
+        <span class="pais-tag">🇨🇦 Canadá</span>
+        <span class="pais-tag">🇦🇺 Austrália</span>
+        <span class="pais-tag">🌍 E mais...</span>
+      </div>
+      <p class="paises-sub">Horários adaptados ao seu fuso horário</p>
+    </div>
+
+    <!-- COMO FUNCIONA -->
+    <div class="section section-alt">
+      <h2>Como funciona</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <span class="step-strong">Você manda uma mensagem em português</span>
+            <span class="step-span">Me conta onde está e o que te traz. Sem formulários, sem burocracia.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <span class="step-strong">Agendamos uma conversa inicial</span>
+            <span class="step-span">Um encontro para nos conhecermos, no horário que funciona no seu fuso. Sem compromisso de continuar.</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <span class="step-strong">Sessões semanais online</span>
+            <span class="step-span">50 minutos, por vídeo, de onde estiver no mundo.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIFERENCIAIS -->
+    <div class="section">
+      <div class="dif-grid">
+        <div class="dif-item"><span class="dif-check">✓</span> Atendimento em português</div>
+        <div class="dif-item"><span class="dif-check">✓</span> Horário no seu fuso</div>
+        <div class="dif-item"><span class="dif-check">✓</span> Qualquer país do mundo</div>
+        <div class="dif-item"><span class="dif-check">✓</span> 100% sigiloso</div>
+        <div class="dif-item"><span class="dif-check">✓</span> Psicóloga brasileira</div>
+        <div class="dif-item"><span class="dif-check">✓</span> CRP 03/20324 ativo</div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section section-alt">
+      <h2>Dúvidas frequentes</h2>
+
+      <details>
+        <summary>A terapia online funciona para quem está no exterior?</summary>
+        <div class="faq-body">Sim. A modalidade online é reconhecida pelo Conselho Federal de Psicologia e garante o mesmo sigilo e qualidade da terapia presencial. Com boa conexão de internet e um ambiente tranquilo, conseguimos criar um espaço profundo de trabalho.</div>
+      </details>
+
+      <details>
+        <summary>Como funciona o pagamento fora do Brasil?</summary>
+        <div class="faq-body">Me mande uma mensagem e conversamos sobre as condições. Há formas de pagamento acessíveis para quem está no exterior — combinamos tudo na primeira conversa.</div>
+      </details>
+
+      <details>
+        <summary>Você consegue atender no meu fuso horário?</summary>
+        <div class="faq-body">Sim. Tenho horários disponíveis para diferentes fusos. Me conta onde você está e encontramos juntas um horário que funcione.</div>
+      </details>
+
+      <details>
+        <summary>Preciso morar fora há muito tempo para buscar apoio?</summary>
+        <div class="faq-body">Não. Atendo tanto quem acabou de chegar quanto quem está há anos fora do Brasil. Cada momento da vida no exterior traz seus próprios desafios.</div>
+      </details>
+
+      <details>
+        <summary>Qual o valor da sessão?</summary>
+        <div class="faq-body">De acordo com as normas do CFP, não divulgo valores publicamente. Me mande uma mensagem e conversamos sobre as condições de pagamento.</div>
+      </details>
+    </div>
+
+    <!-- CTA FINAL -->
+    <div class="cta-final">
+      <h2>A saudade não some.<br>Mas fica mais leve<br>quando você se entende.</h2>
+      <p>A primeira conversa é em português, claro.</p>
+      <a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=exterior&utm_content=final&text=Olá,%20Luiza!%20Moro%20fora%20do%20Brasil%20e%20gostaria%20de%20agendar%20uma%20primeira%20conversa."
+         onclick="gtag('event','conversion',{'send_to':'AW-18023297873'})"
+         target="_blank"
+         class="btn-wpp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Falar com Luiza agora
+      </a>
+      <span class="cta-safe">🔒 Sigilo profissional garantido · Psicóloga registrada no CRP</span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2025 Luiza Lima Zehnle · CRP 03/20324 · Psicologia Analítica<br>
+    Atendimento online para brasileiros em qualquer país do mundo
+  </div>
+
+</div>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=exterior&utm_content=float&text=Olá,%20Luiza!%20Gostaria%20de%20saber%20mais%20sobre%20a%20terapia%20em%20português."
+   onclick="gtag('event','conversion',{'send_to':'AW-18023297873'})"
+   target="_blank"
+   class="float-wpp"
+   aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+</body>
+</html>
