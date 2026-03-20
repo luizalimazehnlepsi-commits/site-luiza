@@ -23,15 +23,12 @@
 <link rel="preload" as="image" href="bg_1.jpeg">
 
 <style>
-   .no-link {
+.no-link {
   color: inherit !important;
   text-decoration: none !important;
   pointer-events: none;
-}
-
-.no-link a {
-  color: inherit !important;
-  text-decoration: none !important;
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
 }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -380,7 +377,7 @@
         <div class="sobre-content">
           <h3>Olá, sou Luiza</h3>
           <span class="sobre-crp">
-  Psicóloga Baiana · <span style="pointer-events: none;">CRP 03/20324</span> · 8 anos de experiência
+  Psicóloga Baiana · <span class="no-link">CRP 03/20324</span> · 8 anos de experiência
 </span>
           <p>Sou brasileira, baiana, e atendo brasileiros que vivem em qualquer lugar do mundo. Especialista em Psicoterapia Junguiana, trabalho com as especificidades de quem constrói vida fora do Brasil: a identidade dividida, a saudade, o estranhamento e a reinvenção que vem com isso.</p>
           <a href="https://www.luizazehnle.com" target="_blank" class="btn-traj">Conheça minha trajetória</a>
@@ -440,7 +437,7 @@
         <div class="dif-item"><span class="dif-check">✓</span> Qualquer país do mundo</div>
         <div class="dif-item"><span class="dif-check">✓</span> 100% sigiloso</div>
         <div class="dif-item"><span class="dif-check">✓</span> Psicóloga brasileira</div>
-        <div class="dif-item"><span class="dif-check">✓</span><span style="pointer-events: none;">CRP 03/20324</span> ativo
+        <div class="dif-item"><span class="dif-check">✓</span><span class="no-link">CRP 03/20324</span> ativo
 </div>
       </div>
     </div>
@@ -530,7 +527,7 @@
   
   <div class="footer">
     © 2025 Luiza Lima Zehnle · 
-    <span style="pointer-events: none;">CRP 03/20324</span> · 
+    <span class="no-link">CRP 03/20324</span> · 
     Psicologia Analítica<br>
     Atendimento online para brasileiros em qualquer país do mundo
 </div>
