@@ -942,14 +942,14 @@ summary::after{
 }
 
 .hero h1{
-  font-size: clamp(42px, 8vw, 64px);
-  line-height: 1.06;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(34px, 6vw, 54px);
+  line-height: 1.08;
   letter-spacing: -0.02em;
   color: #5d4332;
-  margin: 0 auto 20px;
-  max-width: 8.5ch;
-}  
-
+  margin: 0 auto 18px;
+  max-width: 12ch;
+}
 .hero h1 em{
   color: #b07a7a;
 }
@@ -1142,23 +1142,24 @@ summary::after{
   }
 
   .rec-list li{
-    min-height: 132px;
-    padding: 20px 20px;
+    min-height: 148px;
+    padding: 22px 20px;
   }
 }
-   @media (min-width: 900px){
+@media (min-width: 900px){
   .hero h1{
-    max-width: 12.5ch;
-    font-size: 72px;
-    line-height: 1.02;
+    font-size: 58px;
+    max-width: 13ch;
+    line-height: 1.04;
   }
 
   .hero-desc{
-    max-width: 720px;
+    max-width: 680px;
+    font-size: 17px;
   }
 
   .hero{
-    padding: 50px 40px 44px;
+    padding: 44px 40px 40px;
   }
 }
   
@@ -1264,7 +1265,7 @@ function gtag_report_conversion(url) {
     <div class="section">
       <h2>Você se reconhece aqui?</h2>
       <ul class="rec-list">
-        <li><span class="rec-icon"><svg width="22" height="22" viewBox="0 0 50 52" fill="none" stroke="#6b4f2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,32 5,52 45,52 45,32"/><polyline points="0,34 25,10 50,34"/><rect x="18" y="36" width="14" height="16" rx="2"/><rect x="8" y="30" width="10" height="10" rx="1"/></svg></span>Saudade da família e de casa</li>
+        <li><span class="rec-icon"><svg width="22" height="22" viewBox="0 0 50 52" fill="none" stroke="#6b4f2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="5,32 5,52 45,52 45,32"/><polyline points="0,34 25,10 50,34"/><rect x="18" y="36" width="14" height="16" rx="2"/><rect x="8" y="30" width="10" height="10" rx="1"/></svg></span>Saudade da família, da rotina e da sensação de casa</li>
         <li><span class="rec-icon"><svg width="22" height="22" viewBox="0 0 50 44" fill="none" stroke="#6b4f2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="0" y="0" width="36" height="26" rx="6"/><polyline points="6,26 6,34 14,26"/><rect x="14" y="10" width="36" height="26" rx="6"/><polyline points="44,36 44,42 36,36"/><line x1="6" y1="10" x2="24" y2="10"/><line x1="6" y1="16" x2="20" y2="16"/><line x1="20" y1="20" x2="42" y2="20"/><line x1="20" y1="26" x2="36" y2="26"/></svg></span>Dificuldade de fazer terapia em outro idioma... as palavras não saem como deveriam</li>
         <li><span class="rec-icon"><svg width="22" height="22" viewBox="0 0 50 44" fill="none" stroke="#6b4f2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="22" r="16"/><circle cx="34" cy="22" r="16"/><circle cx="25" cy="22" r="4"/></svg></span>Sensação de não pertencer completamente a nenhum dos dois lugares</li>
         <li><span class="rec-icon"><svg width="22" height="22" viewBox="0 0 40 36" fill="none" stroke="#6b4f2c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="20,2 24,14 36,14 27,22 30,34 20,26 10,34 13,22 4,14 16,14"/><circle cx="20" cy="18" r="16" stroke-dasharray="4,3"/></svg></span>A vida que você idealizou fora do Brasil é diferente da que encontrou</li>
