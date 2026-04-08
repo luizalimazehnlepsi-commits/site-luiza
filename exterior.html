@@ -581,19 +581,6 @@
   margin-top: 2px;
 }
 
-  @media (min-width: 900px){
-  .rec-list{
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: stretch;
-  }
-
-  .rec-list li{
-    min-height: 132px;
-    padding: 20px 20px;
-  }
-}
-
 /* SOBRE */
 .sobre-row{
   flex-direction: column;
@@ -1050,21 +1037,6 @@ summary::after{
   background: rgba(123,143,106,0.10);
   transform: translateY(-1px);
 }
-   @media (min-width: 900px){
-  .hero h1{
-    max-width: 12.5ch;
-    font-size: 72px;
-    line-height: 1.02;
-  }
-
-  .hero-desc{
-    max-width: 720px;
-  }
-
-  .hero{
-    padding: 50px 40px 44px;
-  }
-}
 
 /* SOBRE MIM REORGANIZADO */
 .sobre-row{
@@ -1162,6 +1134,34 @@ summary::after{
     text-align: left;
   }
 }
+@media (min-width: 900px){
+  .rec-list{
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .rec-list li{
+    min-height: 132px;
+    padding: 20px 20px;
+  }
+}
+   @media (min-width: 900px){
+  .hero h1{
+    max-width: 12.5ch;
+    font-size: 72px;
+    line-height: 1.02;
+  }
+
+  .hero-desc{
+    max-width: 720px;
+  }
+
+  .hero{
+    padding: 50px 40px 44px;
+  }
+}
+  
 </style>
   <script>
 function gtag_report_conversion(url) {
