@@ -1231,6 +1231,32 @@ summary::after{
   background: #a66767;
   transform: scale(1.35);
 }
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.carousel-arrow {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(166,103,103,0.35);
+  background: rgba(255,255,255,0.55);
+  color: #a66767;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s ease, transform .2s ease;
+  line-height: 1;
+}
+
+.carousel-arrow:hover {
+  background: rgba(166,103,103,0.12);
+  transform: scale(1.08);
+}
+  
 </style>
   <script>
 function gtag_report_conversion(url) {
@@ -1460,11 +1486,17 @@ function gtag_report_conversion(url) {
     </div>
   </div>
 
+ <div class="carousel-nav">
+  <button class="carousel-arrow" id="prev-btn" aria-label="Anterior">&#8592;</button>
+
   <div class="carousel-dots" id="carousel-dots">
     <button class="carousel-dot active" aria-label="Depoimento 1"></button>
     <button class="carousel-dot" aria-label="Depoimento 2"></button>
     <button class="carousel-dot" aria-label="Depoimento 3"></button>
   </div>
+
+  <button class="carousel-arrow" id="next-btn" aria-label="Próximo">&#8594;</button>
+</div>
 </div>
     
   <section class="cta-final">
@@ -1537,6 +1569,13 @@ function gtag_report_conversion(url) {
   dots.forEach(function(dot, i) {
     dot.addEventListener('click', function() { stop(); goTo(i); start(); });
   });
+
+  document.getElementById('prev-btn').addEventListener('click', function() {
+  stop(); goTo((current - 1 + total) % total); start();
+});
+document.getElementById('next-btn').addEventListener('click', function() {
+  stop(); goTo((current + 1) % total); start();
+});
 
   /* swipe no celular */
   var sx = 0;
