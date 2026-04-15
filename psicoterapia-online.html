@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <title>Luiza Zehnle | Psicoterapia Online para Adultos | CRP 03/20324</title>
-  <meta name="description" content="Psicoterapia online para adultos com escuta profunda, ética e individualizada. Atendimento psicológico para quem busca compreender melhor seus conflitos, padrões e travessias." />
+  <title>Luiza Zehnle | Psicoterapia Junguiana Online | CRP 03/20324</title>
+  <meta name="description" content="Psicoterapia junguiana online para adultos em qualquer lugar do Brasil. Um espaço de escuta profunda, ética e individualizada para quem deseja compreender melhor seus conflitos, padrões e travessias." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J84C9ZE889"></script>
@@ -20,42 +20,40 @@
   <link rel="icon" type="image/png" href="7.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="bg_1.jpeg" />
 
   <style>
     :root{
-      --bg-base:#d7a858;
-      --text-main:#3b2f2a;
-      --text-soft:#6e5d54;
-      --title:#5d4332;
-      --title-alt:#6b4f2c;
-      --accent:#7b8f6a;
-      --accent-dark:#667958;
-      --accent-soft:rgba(123,143,106,0.10);
-      --secondary:#a66767;
-      --secondary-soft:rgba(166,103,103,0.12);
-      --card-bg:rgba(244,235,222,0.76);
-      --card-strong:rgba(249,243,233,0.88);
-      --line:rgba(93,67,50,0.12);
-      --shadow-soft:0 14px 40px rgba(60,30,10,0.10);
-      --shadow-mid:0 22px 60px rgba(60,30,10,0.14);
+      --bg:#d7a858;
+      --paper:#efe1c9;
+      --paper-soft:rgba(241,226,204,0.88);
+      --paper-strong:#ead7ba;
+      --surface:#f6ecdc;
+      --surface-2:#fbf6ef;
+      --ink:#3e2d22;
+      --ink-soft:#6d584a;
+      --title:#875f61;
+      --brown:#6b4f2c;
+      --brown-soft:rgba(107,79,44,0.78);
+      --brown-deep:#4c3623;
+      --line:rgba(107,79,44,0.14);
+      --gold:rgba(215,168,88,0.26);
+      --green:#6f815f;
+      --shadow-soft:0 14px 35px rgba(60,30,10,0.10);
+      --shadow-mid:0 22px 58px rgba(60,30,10,0.14);
       --shadow-strong:0 28px 90px rgba(60,30,10,0.18);
-      --radius-xl:28px;
-      --radius-lg:22px;
-      --radius-md:18px;
-      --container:760px;
+      --max:1160px;
+      --nav-offset:132px;
     }
 
-    *, *::before, *::after{ box-sizing:border-box; margin:0; padding:0; }
-    html{ scroll-behavior:smooth; }
-
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
     body{
-      font-family:'Manrope', sans-serif;
-      color:var(--text-main);
-      background-color:var(--bg-base);
+      font-family:'Manrope',sans-serif;
       min-height:100vh;
-      line-height:1.6;
+      color:var(--ink);
+      background:var(--bg);
       overflow-x:hidden;
     }
 
@@ -66,7 +64,7 @@
       background-image:url('bg_1.jpeg');
       background-size:cover;
       background-position:center;
-      opacity:.50;
+      opacity:.58;
       z-index:-2;
       pointer-events:none;
     }
@@ -75,663 +73,889 @@
       content:'';
       position:fixed;
       inset:0;
-      background:
-        radial-gradient(circle at top right, rgba(255,255,255,0.20), transparent 28%),
-        radial-gradient(circle at left center, rgba(166,103,103,0.10), transparent 24%),
-        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+      background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04) 20%, rgba(0,0,0,0.02));
       z-index:-1;
       pointer-events:none;
     }
 
-    img{ max-width:100%; display:block; }
-    a{ color:inherit; }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
 
-    .wrap{
-      width:min(100%, var(--container));
+    .site-shell{
+      width:min(100%, var(--max));
       margin:0 auto;
-      padding:0 20px 92px;
+      padding:0 20px 90px;
     }
 
-    .logo-bar{
+    .brand-top{
       display:flex;
       justify-content:center;
       padding:24px 0 14px;
     }
 
-    .logo-bar img{
-      height:104px;
+    .brand-top img{
+      height:112px;
       width:auto;
       object-fit:contain;
-      filter:drop-shadow(0 4px 14px rgba(60,30,10,.18));
+      filter:drop-shadow(0 6px 18px rgba(60,30,10,.18));
     }
 
-    .card{
-      background:var(--card-bg);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,.28);
-      border-radius:var(--radius-xl);
-      box-shadow:var(--shadow-strong);
-      overflow:hidden;
-      position:relative;
-      isolation:isolate;
+    .nav-wrap{
+      position:sticky;
+      top:18px;
+      z-index:80;
+      margin-bottom:30px;
     }
 
-    .card::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0));
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .card > *{ position:relative; z-index:1; }
-
-    .section{
-      padding:38px 24px;
-      border-bottom:1px solid var(--line);
-    }
-
-    .section-alt{ background:rgba(255,255,255,.08); }
-
-    .section h2,
-    .cta-final h2{
-      font-family:'Playfair Display', serif;
-      font-size:clamp(28px, 4.5vw, 36px);
-      line-height:1.15;
-      letter-spacing:-.02em;
-      color:var(--title);
-      text-align:center;
-      margin-bottom:14px;
-    }
-
-    .section-intro{
-      max-width:620px;
-      margin:0 auto 28px;
-      font-size:15px;
-      line-height:1.9;
-      color:var(--text-soft);
-      text-align:center;
-    }
-
-    .hero{
-      padding:38px 24px 34px;
-      text-align:center;
-      border-bottom:1px solid var(--line);
-    }
-
-    .hero-tag{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      margin-bottom:18px;
-      padding:7px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.38);
-      border:1px solid rgba(123,143,106,.30);
-      color:var(--accent-dark);
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-
-    .hero h1{
-      max-width:13ch;
-      margin:0 auto 18px;
-      font-family:'Playfair Display', serif;
-      font-size:clamp(38px, 7vw, 58px);
-      line-height:1.03;
-      letter-spacing:-.03em;
-      color:var(--title);
-    }
-
-    .hero h1 em{
-      font-style:normal;
-      color:var(--secondary);
-    }
-
-    .hero-desc{
-      max-width:600px;
-      margin:0 auto 22px;
-      font-size:16px;
-      line-height:1.9;
-      color:#6b5a52;
-    }
-
-    .hero-proof{
+    .nav{
+      width:min(100%, 900px);
+      margin:0 auto;
       display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:8px;
-      margin:0 0 22px;
-    }
-
-    .hero-proof span,
-    .mini-badge{
-      display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:6px;
-      padding:8px 11px;
-      border-radius:999px;
-      background:rgba(255,255,255,.45);
-      border:1px solid rgba(93,67,50,.08);
+      padding:12px 16px;
+      border-radius:24px;
+      background:rgba(99,72,46,0.78);
+      border:1px solid rgba(255,255,255,0.12);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:0 16px 40px rgba(60,30,10,0.16);
+    }
+
+    .nav a,
+    .nav button{
+      background:transparent;
+      border:none;
+      color:rgba(255,255,255,0.80);
+      padding:12px 16px;
+      border-radius:14px;
+      font-size:14px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .22s ease,color .22s ease,transform .22s ease;
+    }
+
+    .nav a:hover,
+    .nav button:hover,
+    .nav .is-active{
+      background:rgba(255,255,255,0.16);
+      color:#fff;
+      transform:translateY(-1px);
+    }
+
+    .main-card,
+    .detail-card{
+      background:linear-gradient(180deg, rgba(245,231,210,0.95), rgba(239,225,201,0.92));
+      border:1px solid rgba(255,255,255,0.24);
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:var(--shadow-strong);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+    }
+
+    .detail-card{display:none}
+    .detail-card.is-visible,
+    .main-card.is-visible{display:block}
+    .main-card.is-hidden{display:none}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      align-items:center;
+      gap:56px;
+      padding:64px 38px 54px;
+      min-height:680px;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 14% 14%, rgba(255,255,255,0.30), transparent 30%), radial-gradient(circle at 85% 80%, rgba(135,95,97,0.08), transparent 24%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:18px;
       color:var(--title);
-      font-size:11px;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .hero h1,
+    .section-title,
+    .bio-title{
+      font-family:'Cormorant Garamond',serif;
+      color:var(--title);
+      letter-spacing:-.02em;
+      line-height:.98;
       font-weight:600;
     }
 
-    .hero-actions,
-    .cta-actions{
+    .hero h1{
+      font-size:clamp(3.2rem, 7vw, 5.4rem);
+      max-width:8.5ch;
+      margin-bottom:22px;
+    }
+
+    .hero p{
+      max-width:530px;
+      font-size:18px;
+      line-height:1.75;
+      color:var(--ink-soft);
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
       display:flex;
-      flex-direction:column;
+      flex-wrap:wrap;
+      gap:14px;
       align-items:center;
-      gap:10px;
-    }
-
-    .hero-note,
-    .cta-note{
-      font-size:12px;
-      color:var(--text-soft);
-      line-height:1.65;
+      margin-bottom:28px;
     }
 
     .btn-primary,
-    .btn-outline,
-    .btn-wpp,
-    .btn-soft{
-      transition:transform .22s ease, box-shadow .22s ease, background-color .22s ease, border-color .22s ease, color .22s ease;
-    }
-
-    .btn-primary,
-    .btn-wpp{
+    .btn-secondary,
+    .btn-ghost,
+    .contact-btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      width:100%;
-      max-width:440px;
-      padding:15px 22px;
-      border-radius:18px;
-      text-decoration:none;
-      border:1px solid rgba(0,0,0,.03);
-      background:linear-gradient(135deg, var(--accent), var(--accent-dark));
+      border:none;
+      border-radius:16px;
+      cursor:pointer;
+      transition:transform .24s ease, box-shadow .24s ease, background .24s ease, color .24s ease, border-color .24s ease;
+    }
+
+    .btn-primary{
+      padding:15px 24px;
+      background:#b27678;
       color:#fff;
       font-size:15px;
       font-weight:700;
-      box-shadow:0 14px 30px rgba(102,121,88,.26);
-      animation:btnPulse 2.8s ease-in-out infinite;
+      box-shadow:0 14px 30px rgba(178,118,120,.26);
     }
 
-    .btn-primary:hover,
-    .btn-wpp:hover{
+    .btn-primary:hover{
+      background:#9d6567;
       transform:translateY(-2px);
-      background:linear-gradient(135deg, #8a9e7a, #6c8060);
-      box-shadow:0 18px 38px rgba(102,121,88,.30);
-      animation:none;
+      box-shadow:0 18px 38px rgba(157,101,103,.30);
     }
 
-    .btn-outline,
-    .btn-soft{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:100%;
-      max-width:350px;
-      padding:12px 18px;
-      border-radius:15px;
-      text-decoration:none;
-      font-size:13px;
-      font-weight:700;
-      background:rgba(255,255,255,.32);
-      border:1px solid rgba(123,143,106,.30);
-      color:var(--accent-dark);
-    }
-
-    .btn-outline:hover,
-    .btn-soft:hover{
-      transform:translateY(-1px);
-      background:var(--accent-soft);
-    }
-
-    .cards-grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-    }
-
-    .pain-card,
-    .fit-card,
-    .faq-item,
-    .step,
-    .diff-card,
-    .testimonial-card{
-      border-radius:20px;
-      background:rgba(255,255,255,.42);
-      border:1px solid rgba(93,67,50,.10);
-      box-shadow:var(--shadow-soft);
-      backdrop-filter:blur(8px);
-      -webkit-backdrop-filter:blur(8px);
-    }
-
-    .pain-card,
-    .fit-card,
-    .diff-card{
-      padding:18px;
-    }
-
-    .pain-card{
-      display:grid;
-      grid-template-columns:30px 1fr;
-      gap:14px;
-      align-items:start;
-      transition:transform .22s ease, background .22s ease, border-color .22s ease;
-    }
-
-    .pain-card:hover,
-    .fit-card:hover,
-    .diff-card:hover{
-      transform:translateY(-3px);
-      background:rgba(255,255,255,.72);
-      border-color:rgba(166,103,103,.22);
-    }
-
-    .pain-icon{
-      width:30px;
-      height:30px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      font-size:17px;
-      color:var(--secondary);
-      margin-top:2px;
-    }
-
-    .proposal-box{
-      max-width:640px;
-      margin:0 auto;
-      padding:26px 22px;
-      background:linear-gradient(180deg, rgba(255,255,255,.60), rgba(255,255,255,.34));
-      border:1px solid rgba(93,67,50,.10);
-      border-radius:24px;
-      box-shadow:var(--shadow-mid);
-      text-align:center;
-    }
-
-    .proposal-box p{
+    .btn-secondary{
+      padding:15px 0;
+      background:transparent;
+      color:var(--brown);
       font-size:15px;
-      line-height:1.95;
-      color:var(--text-main);
-      margin-bottom:16px;
+      font-weight:700;
+      border-bottom:1px solid rgba(107,79,44,.24);
+      border-radius:0;
     }
 
-    .proposal-box p:last-child{ margin-bottom:0; }
+    .btn-secondary:hover{
+      color:var(--title);
+      border-color:rgba(135,95,97,.38);
+    }
 
-    .sobre-row{
+    .hero-trust{
       display:flex;
-      flex-direction:column;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .hero-trust span{
+      display:inline-flex;
       align-items:center;
-      gap:18px;
-      text-align:center;
+      justify-content:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.42);
+      border:1px solid rgba(107,79,44,0.10);
+      color:var(--brown);
+      font-size:12px;
+      font-weight:700;
     }
 
-    .sobre-photo-frame{
-      width:min(100%, 290px);
-      padding:10px;
-      background:rgba(255,255,255,.35);
-      border-radius:26px;
-      border:1px solid rgba(255,255,255,.42);
+    .hero-media{
+      position:relative;
+      justify-self:end;
+      width:min(100%, 500px);
+    }
+
+    .hero-frame{
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
       box-shadow:var(--shadow-mid);
+      background:rgba(255,255,255,.30);
     }
 
-    .sobre-photo-frame img{
+    .hero-frame img{
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+    }
+
+    .hero-frame::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0) 48%, rgba(62,45,34,0.10));
+      pointer-events:none;
+    }
+
+    .hero-float-card{
+      position:absolute;
+      left:-34px;
+      bottom:26px;
+      max-width:220px;
+      padding:16px 18px;
+      background:rgba(255,248,238,0.92);
+      border:1px solid rgba(107,79,44,0.12);
+      border-radius:18px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-float-card strong{
+      display:block;
+      margin-bottom:6px;
+      color:var(--brown);
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;
+      line-height:1.05;
+    }
+
+    .hero-float-card span{
+      font-size:13px;
+      line-height:1.65;
+      color:var(--ink-soft);
+    }
+
+    .section{
+      padding:76px 38px;
+      border-top:1px solid var(--line);
+      scroll-margin-top:var(--nav-offset);
+    }
+
+    .section-dark{
+      background:linear-gradient(180deg, rgba(86,63,41,0.98), rgba(70,50,33,0.98));
+      color:#f4e8d6;
+    }
+
+    .section-dark .eyebrow,
+    .section-dark .section-title{color:#f0dfc7}
+    .section-dark .section-copy,
+    .section-dark .dark-text{color:rgba(244,232,214,0.78)}
+
+    .section-head{
+      max-width:760px;
+      margin-bottom:30px;
+    }
+
+    .section-title{
+      font-size:clamp(2.6rem, 5vw, 4rem);
+      margin-bottom:14px;
+    }
+
+    .section-copy{
+      font-size:17px;
+      line-height:1.82;
+      color:var(--ink-soft);
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .recon-list,
+    .cards-grid,
+    .faq-list,
+    .depo-grid,
+    .bio-grid{
+      display:grid;
+      gap:18px;
+    }
+
+    .recon-list{grid-template-columns:1fr 1fr}
+
+    .recon-card,
+    .service-card,
+    .dark-card,
+    .depo-card,
+    .bio-side-card,
+    .contact-chip{
+      border-radius:20px;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .recon-card{
+      padding:22px 20px;
+      background:rgba(255,255,255,0.48);
+      border:1px solid rgba(107,79,44,0.10);
+    }
+
+    .recon-card strong,
+    .service-card h3,
+    .dark-card h4,
+    .bio-side-card h4{
+      display:block;
+      margin-bottom:8px;
+      color:var(--brown);
+      font-size:18px;
+      font-family:'Cormorant Garamond',serif;
+      line-height:1.08;
+    }
+
+    .recon-card p,
+    .service-card p,
+    .dark-card p,
+    .depo-card p,
+    .bio-side-card p{
+      font-size:14.5px;
+      line-height:1.78;
+      color:var(--ink-soft);
+    }
+
+    .service-layout{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .cards-grid{grid-template-columns:1fr 1fr}
+
+    .service-card{
+      padding:22px 20px;
+      background:rgba(255,255,255,0.44);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .dark-card{
+      padding:22px 20px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+    }
+
+    .quote-box{
+      padding:28px 26px;
+      border-left:2px solid rgba(240,223,199,0.55);
+      background:rgba(255,255,255,0.05);
+      border-radius:0 18px 18px 0;
+      margin-bottom:24px;
+    }
+
+    .quote-box blockquote{
+      font-family:'Cormorant Garamond',serif;
+      font-size:30px;
+      line-height:1.35;
+      color:#f0dfc7;
+      margin-bottom:10px;
+      font-style:italic;
+    }
+
+    .quote-box cite{
+      font-size:12px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:rgba(240,223,199,0.62);
+      font-style:normal;
+    }
+
+    .sobre-layout{
+      display:grid;
+      grid-template-columns:340px 1fr;
+      gap:40px;
+      align-items:start;
+    }
+
+    .about-photo-wrap{
+      position:relative;
+    }
+
+    .about-photo{
+      width:100%;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow-mid);
+      background:#fff;
+    }
+
+    .about-photo img{
       width:100%;
       aspect-ratio:4/5;
       object-fit:cover;
       object-position:top;
-      border-radius:20px;
     }
 
-    .sobre-content{
-      background:rgba(255,255,255,.44);
-      border:1px solid rgba(93,67,50,.08);
-      border-radius:24px;
-      padding:28px 22px;
+    .about-badge{
+      position:absolute;
+      top:-18px;
+      right:-18px;
+      width:98px;
+      height:98px;
+      border-radius:50%;
+      background:var(--brown);
+      color:#fff;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      box-shadow:0 18px 34px rgba(60,30,10,.18);
+    }
+
+    .about-badge strong{
+      font-family:'Cormorant Garamond',serif;
+      font-size:32px;
+      line-height:1;
+    }
+
+    .about-badge span{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.10em;
+      line-height:1.35;
+      max-width:66px;
+    }
+
+    .about-copy p{
+      font-size:16px;
+      line-height:1.88;
+      color:var(--ink-soft);
+      margin-bottom:16px;
+    }
+
+    .about-copy strong{color:var(--ink)}
+
+    .about-crp{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(135,95,97,0.22);
+      background:rgba(255,255,255,0.46);
+      color:var(--title);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-top:8px;
+    }
+
+    .about-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:22px;
+    }
+
+    .btn-ghost{
+      padding:14px 18px;
+      border:1px solid rgba(107,79,44,0.18);
+      background:rgba(255,255,255,0.42);
+      color:var(--brown);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .btn-ghost:hover{
+      background:rgba(255,255,255,0.76);
+      transform:translateY(-1px);
+    }
+
+    .steps-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .step-card{
+      padding:26px 22px;
+      border-radius:22px;
+      background:rgba(255,255,255,0.46);
+      border:1px solid rgba(107,79,44,0.10);
       box-shadow:var(--shadow-soft);
     }
 
-    .sobre-content h3{
-      font-family:'Playfair Display', serif;
-      font-size:26px;
-      color:var(--secondary);
-      margin-bottom:6px;
-    }
-
-    .sobre-crp{
-      display:block;
-      margin-bottom:14px;
-      font-size:10px;
-      color:var(--text-soft);
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .sobre-content p{
-      margin-bottom:16px;
-      font-size:14.8px;
-      line-height:1.9;
-      color:var(--text-main);
-    }
-
-    .sobre-content p:last-of-type{ margin-bottom:0; }
-
-    .sobre-highlight{
-      padding:14px 0 0 14px;
-      border-left:2px solid rgba(166,103,103,.32);
-      font-style:italic;
-      color:var(--title);
-    }
-
-    .fit-grid,
-    .diff-grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:12px;
-    }
-
-    .fit-card strong,
-    .diff-card strong{
-      display:block;
-      margin-bottom:6px;
-      color:var(--title);
-      font-size:14.2px;
-    }
-
-    .fit-card span,
-    .diff-card span{
-      font-size:13.5px;
-      line-height:1.8;
-      color:var(--text-soft);
-    }
-
-    .steps{
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-      max-width:650px;
-      margin:0 auto;
-    }
-
-    .step{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      padding:17px;
-    }
-
     .step-num{
-      width:34px;
-      height:34px;
-      flex-shrink:0;
-      border-radius:999px;
+      display:block;
+      margin-bottom:10px;
+      color:rgba(135,95,97,0.36);
+      font-family:'Cormorant Garamond',serif;
+      font-size:58px;
+      line-height:.9;
+    }
+
+    .step-card h4{
+      margin-bottom:8px;
+      color:var(--brown);
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px;
+      line-height:1.05;
+    }
+
+    .step-card p{
+      font-size:14.5px;
+      line-height:1.78;
+      color:var(--ink-soft);
+    }
+
+    .checks{
       display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .checks span{
+      display:inline-flex;
       align-items:center;
-      justify-content:center;
-      background:var(--secondary);
-      color:#fff;
+      gap:8px;
+      padding:9px 13px;
+      border-radius:999px;
+      background:rgba(107,79,44,0.08);
+      border:1px solid rgba(107,79,44,0.12);
+      color:var(--brown);
       font-size:12px;
       font-weight:700;
-      box-shadow:0 10px 24px rgba(166,103,103,.20);
     }
 
-    .step strong{
+    .checks span::before{content:'✓';color:var(--green)}
+
+    .depo-grid{grid-template-columns:repeat(3,1fr)}
+
+    .depo-card{
+      padding:24px 22px;
+      background:rgba(255,255,255,0.50);
+      border:1px solid rgba(107,79,44,0.10);
+    }
+
+    .stars{
       display:block;
-      margin-bottom:4px;
-      color:var(--title);
+      margin-bottom:12px;
+      color:#b27a4d;
+      letter-spacing:.14em;
       font-size:14px;
     }
 
-    .step span{
-      font-size:13.5px;
-      line-height:1.75;
-      color:var(--text-soft);
+    .depo-card p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px;
+      line-height:1.55;
+      font-style:italic;
+      color:#6e5950;
+      margin-bottom:14px;
     }
 
-    details{
-      margin-bottom:12px;
-      overflow:hidden;
+    .depo-author{
+      display:block;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#b08d67;
+      font-weight:700;
     }
 
-    summary{
+    .faq-list{max-width:860px}
+
+    .faq-item{
+      border-bottom:1px solid rgba(107,79,44,0.12);
+    }
+
+    .faq-trigger{
+      width:100%;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:14px;
-      padding:17px 18px;
-      list-style:none;
-      cursor:pointer;
-      font-size:14px;
-      font-weight:700;
-      color:var(--title);
-    }
-
-    summary::-webkit-details-marker{ display:none; }
-
-    summary::after{
-      content:'+';
-      font-size:22px;
-      line-height:1;
-      color:var(--secondary);
-      flex-shrink:0;
-      transition:transform .26s ease;
-    }
-
-    details[open] summary::after{ transform:rotate(45deg); }
-
-    .faq-body{
-      padding:0 18px 18px;
-      font-size:13.5px;
-      line-height:1.85;
-      color:var(--text-main);
-    }
-
-    .testimonial-track{ overflow:hidden; }
-    .testimonial-slides{ display:flex; transition:transform .42s cubic-bezier(.4,0,.2,1); }
-
-    .testimonial-card{
-      min-width:100%;
-      position:relative;
-      overflow:hidden;
-      padding:22px 18px;
-      background:rgba(255,255,255,.60);
-    }
-
-    .testimonial-card::before{
-      content:'“';
-      position:absolute;
-      top:8px;
-      right:14px;
-      font-family:'Playfair Display', serif;
-      font-size:54px;
-      line-height:1;
-      color:rgba(166,103,103,.14);
-    }
-
-    .testimonial-stars{
-      display:block;
-      margin-bottom:10px;
-      font-size:14px;
-      letter-spacing:.08em;
-      color:#c5a15a;
-    }
-
-    .testimonial-text{
-      position:relative;
-      z-index:1;
-      margin-bottom:12px;
-      font-size:14px;
-      line-height:1.9;
-      color:var(--text-main);
-      font-style:italic;
-    }
-
-    .testimonial-author{
-      font-size:11px;
-      font-weight:700;
-      letter-spacing:.10em;
-      text-transform:uppercase;
-      color:var(--title);
-    }
-
-    .carousel-nav{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .carousel-arrow{
-      width:34px;
-      height:34px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      border:1.5px solid rgba(166,103,103,.35);
-      background:rgba(255,255,255,.55);
-      color:var(--secondary);
-      font-size:16px;
-      line-height:1;
-      cursor:pointer;
-      transition:transform .2s ease, background .2s ease;
-    }
-
-    .carousel-arrow:hover{
-      transform:scale(1.08);
-      background:rgba(166,103,103,.10);
-    }
-
-    .carousel-dots{
-      display:flex;
-      justify-content:center;
-      gap:8px;
-      margin-top:16px;
-    }
-
-    .carousel-dot{
-      width:7px;
-      height:7px;
+      gap:16px;
+      padding:22px 0;
       border:none;
-      border-radius:50%;
-      background:rgba(166,103,103,.24);
+      background:none;
+      text-align:left;
       cursor:pointer;
-      transition:transform .2s ease, background .2s ease;
+      color:var(--brown);
+      font-family:'Cormorant Garamond',serif;
+      font-size:30px;
+      line-height:1.08;
     }
 
-    .carousel-dot.active{
-      background:var(--secondary);
-      transform:scale(1.35);
+    .faq-icon{
+      width:32px;
+      height:32px;
+      min-width:32px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(107,79,44,0.18);
+      color:var(--brown);
+      font-size:18px;
+      transition:transform .24s ease, background .24s ease, color .24s ease;
     }
+
+    .faq-item.open .faq-icon{
+      transform:rotate(45deg);
+      background:var(--brown);
+      color:#fff;
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .36s ease;
+    }
+
+    .faq-inner{
+      padding:0 0 22px;
+      font-size:15px;
+      line-height:1.85;
+      color:var(--ink-soft);
+      max-width:780px;
+    }
+
+    .faq-item.open .faq-answer{max-height:320px}
 
     .cta-final{
-      padding:36px 24px;
       text-align:center;
-      background:linear-gradient(180deg, #654937 0%, #5a4031 100%);
+      padding:84px 38px;
+      background:linear-gradient(180deg, rgba(78,57,37,0.98), rgba(66,47,31,0.98));
+      color:#f3e4cd;
     }
 
     .cta-final h2{
-      color:#f1e2cc;
-      margin-bottom:12px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(2.8rem,5vw,4.4rem);
+      line-height:1.02;
+      color:#f3e4cd;
+      max-width:720px;
+      margin:0 auto 16px;
     }
 
     .cta-final p{
       max-width:560px;
-      margin:0 auto 22px;
-      font-size:14px;
+      margin:0 auto 26px;
+      font-size:17px;
       line-height:1.8;
-      color:rgba(241,226,204,.78);
+      color:rgba(243,228,205,0.75);
     }
 
-    .cta-safe{
-      display:block;
-      margin-top:12px;
-      font-size:10px;
-      color:rgba(241,226,204,.45);
-      letter-spacing:.04em;
+    .cta-final .btn-primary{background:#f0dfc7;color:#4e3925;box-shadow:none}
+    .cta-final .btn-primary:hover{background:#e7d4b9;color:#4e3925}
+
+    .cta-meta{
+      margin-top:18px;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:rgba(243,228,205,0.44);
     }
 
     .footer{
+      margin-top:22px;
+      padding:28px 10px 0;
       text-align:center;
-      padding:20px;
-      font-size:10px;
-      line-height:1.75;
-      color:rgba(255,255,255,.58);
+      color:rgba(255,255,255,0.62);
+      font-size:11px;
+      line-height:1.8;
     }
 
-    .float-wpp{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:50;
-      width:56px;
-      height:56px;
-      display:flex;
+    .detail-inner{
+      padding:30px 34px 40px;
+    }
+
+    .back-link{
+      display:inline-flex;
       align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      text-decoration:none;
+      gap:8px;
+      margin-bottom:24px;
+      color:var(--brown);
+      font-size:14px;
+      font-weight:600;
+      cursor:pointer;
+      border:none;
+      background:none;
+    }
+
+    .bio-grid{
+      grid-template-columns:280px 1fr;
+      gap:26px;
+      align-items:start;
+    }
+
+    .bio-side{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      position:sticky;
+      top:140px;
+    }
+
+    .bio-photo{
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:var(--shadow-mid);
+    }
+
+    .bio-photo img{
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:top;
+    }
+
+    .contact-btn{
+      width:100%;
+      padding:14px 16px;
       color:#fff;
-      background:linear-gradient(135deg, var(--accent), var(--accent-dark));
-      box-shadow:0 12px 30px rgba(60,30,10,.22);
-      animation:btnPulse 2.8s ease-in-out infinite;
-      transition:transform .22s ease, box-shadow .22s ease;
+      font-weight:700;
+      font-size:14px;
     }
 
-    .float-wpp:hover{
-      transform:scale(1.06) translateY(-1px);
-      animation:none;
+    .contact-btn.whatsapp{background:#25D366}
+    .contact-btn.linkedin{background:#0a66c2}
+    .contact-btn.google{background:#fff;color:#5b4b40;border:1px solid rgba(107,79,44,0.12)}
+
+    .bio-side-card{
+      padding:16px 18px;
+      background:rgba(223,194,148,0.26);
+      border:1px solid rgba(176,141,103,0.18);
     }
 
-    @media (max-width: 560px){
-      .section{ padding:30px 20px; }
-      .hero{ padding:34px 20px 30px; }
-      .cta-final{ padding:28px 20px; }
-      .logo-bar img{ height:96px; }
+    .bio-main{
+      padding:0;
     }
 
-    @media (min-width:700px){
-      .wrap{ max-width:800px; }
-      .hero{ padding:44px 34px 40px; }
-      .section{ padding:42px 34px; }
-      .btn-primary,
-      .btn-outline,
-      .btn-soft{ width:auto; }
-      .cards-grid,
-      .fit-grid,
-      .diff-grid{ grid-template-columns:1fr 1fr; gap:16px; }
-      .sobre-row{
-        display:grid;
-        grid-template-columns:230px 1fr;
-        align-items:flex-start;
-        gap:28px;
-        text-align:left;
+    .bio-title{
+      font-size:50px;
+      line-height:1;
+      margin-bottom:6px;
+    }
+
+    .bio-sub{
+      font-size:13px;
+      line-height:1.7;
+      color:#8e6b5d;
+      margin-bottom:22px;
+    }
+
+    .bio-main p{
+      font-size:16px;
+      line-height:1.9;
+      color:var(--ink-soft);
+      margin-bottom:18px;
+    }
+
+    .bio-main strong{color:var(--ink)}
+
+    .bio-highlight{
+      margin-top:10px;
+      padding:18px 20px;
+      background:rgba(223,194,148,0.28);
+      border:1px solid rgba(176,141,103,0.18);
+      border-radius:18px;
+      font-size:15px;
+      line-height:1.82;
+      color:#6d584a;
+    }
+
+    .mobile-menu-btn{display:none}
+
+    @media (max-width: 980px){
+      .hero,
+      .service-layout,
+      .sobre-layout,
+      .bio-grid,
+      .split{
+        grid-template-columns:1fr;
       }
-      .sobre-content{ padding:30px 26px; }
+
+      .hero{
+        min-height:auto;
+        gap:34px;
+        padding:46px 26px 40px;
+      }
+
+      .hero-media{justify-self:center;width:min(100%, 520px)}
+      .hero-float-card{left:14px;bottom:14px;max-width:220px}
+      .recon-list,
+      .cards-grid,
+      .steps-grid,
+      .depo-grid{grid-template-columns:1fr}
+      .bio-side{position:static}
+      .about-photo-wrap{max-width:340px}
     }
 
-    @media (min-width:900px){
-      .hero h1{ font-size:60px; max-width:13ch; }
-      .hero-desc{ font-size:17px; max-width:670px; }
-      .cards-grid{ gap:18px; }
-      .pain-card{ min-height:138px; padding:20px; }
-    }
+    @media (max-width: 760px){
+      :root{--nav-offset:104px}
+      .brand-top{padding:14px 0 8px}
+      .brand-top img{height:78px}
+      .nav-wrap{top:10px;margin-bottom:20px}
+      .nav{
+        justify-content:space-between;
+        width:100%;
+        padding:10px 12px;
+        gap:10px;
+      }
 
-    @keyframes btnPulse{
-      0%, 100%{ box-shadow:0 6px 18px rgba(74,93,35,.35), 0 0 0 0 rgba(74,93,35,.22); }
-      55%{ box-shadow:0 6px 18px rgba(74,93,35,.35), 0 0 0 12px rgba(74,93,35,0); }
+      .nav-links{
+        position:absolute;
+        left:0;
+        right:0;
+        top:calc(100% + 10px);
+        display:none;
+        flex-direction:column;
+        gap:6px;
+        padding:12px;
+        border-radius:20px;
+        background:rgba(99,72,46,0.92);
+        border:1px solid rgba(255,255,255,0.12);
+        box-shadow:0 18px 38px rgba(60,30,10,.16);
+      }
+
+      .nav-links.is-open{display:flex}
+      .nav-links a,
+      .nav-links button{width:100%;text-align:left}
+      .mobile-menu-btn{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        padding:12px 14px;
+        border-radius:14px;
+        border:none;
+        background:rgba(255,255,255,0.14);
+        color:#fff;
+        font-weight:700;
+        cursor:pointer;
+      }
+
+      .hero h1{font-size:clamp(2.9rem, 13vw, 4rem);max-width:8.8ch}
+      .hero p,
+      .section-copy,
+      .cta-final p,
+      .about-copy p,
+      .bio-main p{font-size:15px}
+      .hero-actions{flex-direction:column;align-items:flex-start}
+      .btn-primary{width:100%}
+      .btn-secondary{padding-top:0}
+      .section,
+      .cta-final,
+      .detail-inner{padding-left:22px;padding-right:22px}
+      .section{padding-top:58px;padding-bottom:58px}
+      .faq-trigger{font-size:25px}
+      .bio-title{font-size:40px}
     }
   </style>
 
@@ -751,309 +975,350 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="logo-bar">
-      <a href="https://www.luizazehnle.com/" aria-label="Ir para o site principal da Luiza Zehnle">
+  <div class="site-shell">
+    <div class="brand-top">
+      <a href="#" onclick="showHome(); return false;" aria-label="Voltar para a página inicial">
         <img src="LOGO_LUIZA.png" alt="Luiza Lima Zehnle" fetchpriority="high" />
       </a>
     </div>
 
-    <div class="card">
-      <section class="hero">
-        <span class="hero-tag">Psicoterapia online para adultos</span>
-        <h1>Tem momentos em que <em>seguir em frente</em> já não basta.</h1>
-        <p class="hero-desc">
-          Um espaço de escuta profunda para adultos que querem compreender melhor seus conflitos,
-          padrões, relações e travessias — com ética, presença e uma clínica que respeita a singularidade da sua história.
-        </p>
-
-        <div class="hero-proof">
-          <span>Atendimento online</span>
-          <span>Psicoterapia individual</span>
-          <span>8 anos de experiência</span>
+    <div class="nav-wrap">
+      <nav class="nav">
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <button class="is-active" onclick="showHomeAndScroll('hero')">Início</button>
+          <button onclick="showBio()">Sobre Mim</button>
+          <a href="#atendimentos" onclick="closeMobileMenu()">Atendimentos</a>
+          <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+          <a href="#contato" onclick="closeMobileMenu()">Contato</a>
         </div>
-
-        <div class="hero-actions">
-          <a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" class="btn-primary" aria-label="Agendar entrevista inicial pelo WhatsApp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            Agendar entrevista inicial
-          </a>
-          <a href="#como-funciona" class="btn-outline">Entender como funciona</a>
-          <span class="hero-note">Primeiro contato direto pelo WhatsApp, com sigilo e acolhimento.</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Talvez você esteja vivendo algo assim</h2>
-        <p class="section-intro">
-          Nem sempre o sofrimento aparece de forma óbvia. Às vezes ele vem como cansaço, repetição, confusão ou a sensação de estar vivendo longe de si.
-        </p>
-
-        <div class="cards-grid">
-          <article class="pain-card">
-            <span class="pain-icon">◌</span>
-            <p>Você percebe que repete padrões em vínculos, escolhas ou formas de se posicionar, mas não consegue sair disso sozinho.</p>
-          </article>
-          <article class="pain-card">
-            <span class="pain-icon">◌</span>
-            <p>Tem estado sobrecarregado, ansioso ou emocionalmente cansado, como se algo estivesse sempre no limite por dentro.</p>
-          </article>
-          <article class="pain-card">
-            <span class="pain-icon">◌</span>
-            <p>Passou por mudanças, perdas, crises ou transições e sente que ainda não conseguiu elaborar o que está vivendo.</p>
-          </article>
-          <article class="pain-card">
-            <span class="pain-icon">◌</span>
-            <p>Funciona por fora, mas por dentro carrega conflitos, dúvidas, autoexigência ou uma sensação persistente de desalinho.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-alt">
-        <h2>Uma clínica para quem quer ir além do alívio imediato</h2>
-        <div class="proposal-box">
-          <p>
-            A psicoterapia pode ser um espaço para dar nome ao que está confuso, reconhecer movimentos inconscientes,
-            compreender repetições e construir uma relação mais verdadeira com a própria vida.
-          </p>
-          <p>
-            Meu trabalho não se orienta por respostas prontas nem por fórmulas de bem-estar.
-            É um processo ético, cuidadoso e individualizado, voltado à complexidade do que você vive.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Sobre mim</h2>
-        <div class="sobre-row">
-          <div class="sobre-photo-frame">
-            <img src="luiza.webp" alt="Foto de Luiza Lima Zehnle" />
-          </div>
-
-          <div class="sobre-content">
-            <h3>Olá, sou Luiza</h3>
-            <span class="sobre-crp">Psicóloga · CRP 03/20324 · Especialista em Psicoterapia Junguiana</span>
-
-            <p>
-              Sou psicóloga há 8 anos e trabalho com uma escuta clínica que considera a singularidade de cada pessoa,
-              sua história, seus afetos, seus contextos e os sentidos que emergem em suas experiências.
-            </p>
-
-            <p class="sobre-highlight">
-              Acredito numa psicoterapia que não reduza alguém a um sintoma, mas que abra espaço para compreender a complexidade da vida psíquica com profundidade e responsabilidade.
-            </p>
-
-            <p>
-              Minha trajetória inclui experiência clínica, atuação em saúde mental, escolas, contextos culturais e atendimento a mulheres em situação de violência.
-              Esses atravessamentos alimentam uma prática atenta às dimensões subjetivas, sociais e simbólicas do sofrimento.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-alt">
-        <h2>Para quem este processo pode fazer sentido</h2>
-        <p class="section-intro">
-          Esta psicoterapia costuma fazer mais sentido para adultos que desejam implicação real com o próprio processo — não só uma resposta rápida para apagar incômodos.
-        </p>
-
-        <div class="fit-grid">
-          <article class="fit-card">
-            <strong>Para quem busca profundidade</strong>
-            <span>Pessoas que querem compreender emoções, padrões e conflitos com mais densidade, e não apenas “funcionar melhor”.</span>
-          </article>
-          <article class="fit-card">
-            <strong>Para quem atravessa crises ou transições</strong>
-            <span>Mudanças de vida, términos, lutos, impasses profissionais, conflitos familiares e momentos de reposicionamento subjetivo.</span>
-          </article>
-          <article class="fit-card">
-            <strong>Para quem deseja autoconhecimento com consistência</strong>
-            <span>Sem clichê terapêutico. Com escuta, elaboração e um trabalho construído ao longo do tempo.</span>
-          </article>
-          <article class="fit-card">
-            <strong>Para quem quer um vínculo clínico ético</strong>
-            <span>Um espaço de cuidado com presença, rigor e respeito ao seu ritmo, sem promessas fáceis nem linguagem artificial.</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>O que sustenta meu trabalho</h2>
-        <div class="diff-grid">
-          <article class="diff-card">
-            <strong>Escuta profunda e individualizada</strong>
-            <span>Cada processo é construído a partir da história, da linguagem e dos conflitos específicos de quem chega.</span>
-          </article>
-          <article class="diff-card">
-            <strong>Base junguiana em linguagem viva</strong>
-            <span>Uma clínica que considera inconsciente, simbolismo, narrativas e repetições sem transformar isso em discurso hermético.</span>
-          </article>
-          <article class="diff-card">
-            <strong>Olhar atento ao contexto</strong>
-            <span>A vida psíquica não existe no vácuo. Relações, cultura, gênero e atravessamentos sociais também importam.</span>
-          </article>
-          <article class="diff-card">
-            <strong>Presença sem performance</strong>
-            <span>Sem personagem terapêutica, sem frases prontas, sem um marketing que promete cura em cinco passos. Ainda bem.</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-alt" id="como-funciona">
-        <h2>Como funciona</h2>
-        <div class="steps">
-          <article class="step">
-            <span class="step-num">1</span>
-            <div>
-              <strong>Você entra em contato</strong>
-              <span>Pelo WhatsApp, para agendar uma entrevista inicial e alinhar as primeiras informações.</span>
-            </div>
-          </article>
-          <article class="step">
-            <span class="step-num">2</span>
-            <div>
-              <strong>Realizamos um primeiro encontro</strong>
-              <span>Esse momento serve para compreender sua busca, conversar sobre o processo e avaliar se esse espaço faz sentido para você.</span>
-            </div>
-          </article>
-          <article class="step">
-            <span class="step-num">3</span>
-            <div>
-              <strong>Definimos os combinados clínicos</strong>
-              <span>Frequência, horário, modalidade e demais acordos necessários para o início do acompanhamento.</span>
-            </div>
-          </article>
-          <article class="step">
-            <span class="step-num">4</span>
-            <div>
-              <strong>As sessões acontecem online</strong>
-              <span>Com duração média de 50 minutos, em um setting ético, sigiloso e reservado exclusivamente para você.</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>Perguntas frequentes</h2>
-
-        <details class="faq-item">
-          <summary>O que acontece na entrevista inicial?</summary>
-          <div class="faq-body">
-            A entrevista inicial é um primeiro encontro para nos conhecermos, compreender a sua demanda atual e conversarmos sobre o funcionamento do processo. Também é um momento para você sentir como se percebe nesse espaço antes de decidir iniciar a psicoterapia.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Preciso estar em crise para fazer terapia?</summary>
-          <div class="faq-body">
-            Não. A psicoterapia pode ser importante tanto em momentos de sofrimento intenso quanto em fases de autoconhecimento, transição, impasse ou desejo de compreender melhor a própria vida emocional.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Como funciona a psicoterapia online?</summary>
-          <div class="faq-body">
-            Os atendimentos acontecem por videochamada, com sigilo e enquadre clínico. É importante estar em um local com privacidade e boa conexão, para que o encontro possa acontecer com segurança e presença.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>Quanto tempo dura o processo terapêutico?</summary>
-          <div class="faq-body">
-            Não existe uma resposta única. O tempo varia conforme a demanda, o momento de vida e o ritmo de cada pessoa. A psicoterapia é um processo que se constrói ao longo do vínculo e do trabalho clínico.
-          </div>
-        </details>
-      </section>
-
-      <section class="section section-alt">
-        <h2>Depoimentos</h2>
-        <p class="section-intro">Você pode manter aqui o mesmo modelo de depoimentos do seu exterior.html. Já deixei o carrossel pronto para isso.</p>
-
-        <div class="testimonial-track" aria-label="Depoimentos de pacientes">
-          <div class="testimonial-slides" id="testimonialSlides">
-            <article class="testimonial-card">
-              <span class="testimonial-stars">★★★★★</span>
-              <p class="testimonial-text">Seu depoimento entra aqui. Idealmente, use falas curtas, específicas e humanas. Quanto mais concreto, melhor. “Excelente profissional” sozinho converte menos do que você imagina.</p>
-              <span class="testimonial-author">Paciente</span>
-            </article>
-            <article class="testimonial-card">
-              <span class="testimonial-stars">★★★★★</span>
-              <p class="testimonial-text">Outro depoimento aqui. Prefira relatos que mostrem percepção de processo, vínculo, profundidade e mudança real — sem promessas grandiosas.</p>
-              <span class="testimonial-author">Paciente</span>
-            </article>
-            <article class="testimonial-card">
-              <span class="testimonial-stars">★★★★★</span>
-              <p class="testimonial-text">Mais um depoimento aqui. Três a cinco depoimentos bem escolhidos costumam funcionar melhor do que uma coleção de frases genéricas.</p>
-              <span class="testimonial-author">Paciente</span>
-            </article>
-          </div>
-        </div>
-
-        <div class="carousel-nav">
-          <button class="carousel-arrow" id="prevSlide" aria-label="Depoimento anterior">‹</button>
-          <button class="carousel-arrow" id="nextSlide" aria-label="Próximo depoimento">›</button>
-        </div>
-        <div class="carousel-dots" id="carouselDots"></div>
-      </section>
-
-      <section class="cta-final">
-        <h2>Se fizer sentido para você, podemos começar por uma primeira conversa</h2>
-        <p>
-          A entrevista inicial é um espaço para entender sua busca, tirar dúvidas e avaliar se este processo pode ser um bom caminho neste momento da sua vida.
-        </p>
-
-        <div class="cta-actions">
-          <a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=cta_final&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" class="btn-wpp">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-            Agendar entrevista inicial
-          </a>
-          <span class="cta-note">Atendimento online para adultos.</span>
-          <span class="cta-safe">Psicóloga · CRP 03/20324</span>
-        </div>
-      </section>
+      </nav>
     </div>
 
+    <main id="home-view" class="main-card is-visible">
+      <section class="hero" id="hero">
+        <div>
+          <span class="eyebrow">Presencial e online</span>
+          <h1>Psicoterapia Profunda Junguiana</h1>
+          <p>
+            Um espaço baseado em ética, escuta atenta e aprofundamento, para olharmos com calma para suas experiências emocionais e formas de se relacionar com a vida. O acompanhamento é individualizado e respeita seu ritmo e a sua história.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">
+              Agendar entrevista inicial
+            </a>
+            <button class="btn-secondary" onclick="showBio()">Conhecer minha trajetória →</button>
+          </div>
+
+          <div class="hero-trust">
+            <span>8 anos de experiência</span>
+            <span>CRP 03/20324</span>
+            <span>Atendimento online e presencial</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-frame">
+            <img src="luiza-atendendo.webp" alt="Poltrona de atendimento da clínica" />
+          </div>
+          <div class="hero-float-card">
+            <strong>Uma clínica com presença</strong>
+            <span>Para quem quer mais do que alívio rápido: um espaço de elaboração, profundidade e escuta real.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="reconhece">
+        <div class="section-head">
+          <span class="eyebrow">Você se reconhece aqui?</span>
+          <h2 class="section-title">Às vezes algo pede atenção por dentro</h2>
+          <p class="section-copy">
+            A psicoterapia pode ajudar tanto em momentos de crise quanto em processos de autoconhecimento, transições e desejo de aprofundamento. O mais importante é o desejo de se escutar com mais verdade.
+          </p>
+        </div>
+
+        <div class="recon-list">
+          <article class="recon-card">
+            <strong>Padrões que se repetem</strong>
+            <p>Nos vínculos, nas escolhas ou na forma de se posicionar, como se você se visse de novo no mesmo lugar.</p>
+          </article>
+          <article class="recon-card">
+            <strong>Ansiedade, tristeza ou vazio</strong>
+            <p>Mesmo quando a vida segue por fora, por dentro há algo desalinhado, cansado ou sem nome claro.</p>
+          </article>
+          <article class="recon-card">
+            <strong>Transições e travessias</strong>
+            <p>Términos, lutos, mudanças profissionais, crises relacionais ou fases em que antigas referências já não bastam.</p>
+          </article>
+          <article class="recon-card">
+            <strong>Desejo de autoconhecimento</strong>
+            <p>Não como slogan vazio, mas como vontade real de compreender melhor sua história, seus afetos e suas contradições.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="atendimentos">
+        <div class="service-layout">
+          <div>
+            <span class="eyebrow">A abordagem</span>
+            <h2 class="section-title">Psicologia Analítica, ou Psicologia Profunda</h2>
+            <p class="section-copy dark-text" style="margin-bottom:22px;">
+              Sigo a abordagem junguiana, que compreende a vida psíquica como formada por conteúdos conscientes e inconscientes, presentes nas nossas escolhas, conflitos, relações, emoções e também no corpo.
+            </p>
+            <div class="quote-box">
+              <blockquote>“Quem olha para fora sonha, quem olha para dentro desperta.”</blockquote>
+              <cite>— C.G. Jung</cite>
+            </div>
+            <p class="section-copy dark-text">
+              O foco não é adequar alguém a um modelo de funcionamento, mas ampliar percepção, responsabilidade e coerência interna. Sonhos, imagens, afetos e narrativas podem ser recursos clínicos quando fazem sentido no processo.
+            </p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="dark-card">
+              <h4>Escuta sem interpretações prontas</h4>
+              <p>Cada pessoa tem uma singularidade. Não há receita de bolo, nem leitura engessada da sua experiência.</p>
+            </article>
+            <article class="dark-card">
+              <h4>Sonhos, símbolos e imagens</h4>
+              <p>Elementos da vida psíquica são considerados com técnica e contexto, e não como misticismo decorativo.</p>
+            </article>
+            <article class="dark-card">
+              <h4>Individuação como norte</h4>
+              <p>Tornar-se quem se é: dialogar com as muitas partes que vivem em você, em vez de sufocá-las.</p>
+            </article>
+            <article class="dark-card">
+              <h4>Cultura, corpo e contexto</h4>
+              <p>Saúde mental não existe no vácuo. História pessoal, atravessamentos sociais e contexto importam.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre-resumo">
+        <div class="sobre-layout">
+          <div class="about-photo-wrap">
+            <div class="about-photo">
+              <img src="luiza.webp" alt="Foto de Luiza Lima Zehnle" />
+            </div>
+            <div class="about-badge">
+              <strong>8</strong>
+              <span>anos de clínica</span>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <span class="eyebrow">Sobre Mim</span>
+            <h2 class="section-title">Olá, sou Luiza</h2>
+            <p>
+              Sou psicóloga com 8 anos de experiência clínica e <strong>especialista em Teoria e Psicoterapia Junguiana</strong>. Acredito num olhar profundo sobre saúde mental, que respeite a multiplicidade que cada pessoa é e crie espaço para que ela possa se tornar mais inteira.
+            </p>
+            <p>
+              Minha trajetória inclui clínica psicológica, saúde mental, escolas, contextos culturais e atendimento a mulheres em situação de violência de gênero. Esses atravessamentos alimentam minha escuta e ampliam minha compreensão do sofrimento psíquico.
+            </p>
+            <div class="about-crp">CRP 03/20324 · Registro ativo</div>
+
+            <div class="about-actions">
+              <button class="btn-ghost" onclick="showBio()">Ler página completa sobre mim</button>
+              <a class="btn-primary" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=sobre&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">Falar comigo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="como-funciona">
+        <div class="section-head" style="text-align:center;max-width:780px;margin-left:auto;margin-right:auto;">
+          <span class="eyebrow">Como funciona</span>
+          <h2 class="section-title">Simples para começar</h2>
+          <p class="section-copy">Sem formulários intermináveis. Sem burocracia desnecessária. Apenas uma primeira conversa para entender sua busca.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-num">01</span>
+            <h4>Você manda uma mensagem</h4>
+            <p>Conta o que te trouxe e seu interesse em agendar uma entrevista inicial.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">02</span>
+            <h4>Marcamos o primeiro encontro</h4>
+            <p>Um momento para compreender sua busca, alinhar combinados e avaliar se este espaço faz sentido para você.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-num">03</span>
+            <h4>As sessões seguem semanalmente</h4>
+            <p>Atendimento online ou presencial, em um horário reservado para o seu processo terapêutico.</p>
+          </article>
+        </div>
+
+        <div class="checks">
+          <span>Atendimento 100% online</span>
+          <span>Para qualquer cidade do Brasil</span>
+          <span>Sessões de 50 minutos</span>
+          <span>Sigilo profissional</span>
+          <span>Emissão de nota fiscal</span>
+          <span>CRP ativo</span>
+        </div>
+      </section>
+
+      <section class="section" id="depoimentos">
+        <div class="section-head" style="text-align:center;max-width:760px;margin-left:auto;margin-right:auto;">
+          <span class="eyebrow">O que dizem os pacientes</span>
+          <h2 class="section-title">Experiências reais</h2>
+        </div>
+
+        <div class="depo-grid">
+          <article class="depo-card">
+            <span class="stars">★★★★★</span>
+            <p>“No tempo em que fui atendido por ela, me ajudou a entender muito do que se passava ao meu redor de forma muito simples e clara. Até hoje ainda uso de tudo que trabalhamos na terapia no meu dia a dia.”</p>
+            <span class="depo-author">H. — Google</span>
+          </article>
+          <article class="depo-card">
+            <span class="stars">★★★★★</span>
+            <p>“Luiza combina de forma rara sensibilidade e escuta atenta com grande maturidade profissional. Conduz os atendimentos com ética, cuidado e profundidade.”</p>
+            <span class="depo-author">F. — Google</span>
+          </article>
+          <article class="depo-card">
+            <span class="stars">★★★★★</span>
+            <p>“Profissional que me ajudou a passar por momentos desafiadores. Me trouxe clareza e foco para fazer uma travessia importante.”</p>
+            <span class="depo-author">A. — Google</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="section-head">
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2 class="section-title">Perguntas comuns</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">O que esperar do primeiro encontro?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-inner">O primeiro encontro é um momento para nos conhecermos e conversarmos sobre a sua busca por psicoterapia neste momento da vida. Também fazemos os demais acordos, como dia e horário das sessões, condições de pagamento e esclarecimento de dúvidas. A partir deste encontro você poderá avaliar como se sentiu para decidir se deseja seguir no processo terapêutico.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">Preciso ter um problema grave para procurar terapia?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-inner">Não. A psicoterapia pode ajudar tanto em momentos de crise quanto em processos de autoconhecimento, transições e desejo de aprofundamento. O mais importante é o desejo de escutar a si mesmo com mais atenção.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">Como funciona o atendimento online?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-inner">A psicoterapia online permite acompanhamento psicológico com sigilo e segurança. Com boa conexão e um ambiente reservado, conseguimos construir um espaço de cuidado e presença.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-trigger" onclick="toggleFaq(this)">Qual o valor da sessão?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-inner">De acordo com as normas éticas da profissão, não realizo divulgação pública de valores. Pelo WhatsApp podemos conversar sobre as condições de pagamento, além de emissão de nota fiscal e possibilidades de reembolso.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-final" id="contato">
+        <h2>Se faz sentido para você, estou disponível para uma primeira conversa</h2>
+        <p>
+          Um espaço baseado em ética, escuta atenta e aprofundamento, para olharmos com calma para suas experiências emocionais e formas de se relacionar com a vida.
+        </p>
+        <a class="btn-primary" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=cta_final&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">Agendar entrevista inicial</a>
+        <div class="cta-meta">Sigilo profissional garantido · CRP 03/20324 · Psicologia Analítica</div>
+      </section>
+    </main>
+
+    <section id="bio-view" class="detail-card">
+      <div class="detail-inner">
+        <button class="back-link" onclick="showHome()">← Voltar para Início</button>
+
+        <div class="bio-grid">
+          <aside class="bio-side">
+            <div class="bio-photo">
+              <img src="luiza.webp" alt="Foto de Luiza Lima Zehnle" />
+            </div>
+
+            <a class="contact-btn whatsapp" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=bio_whatsapp&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">Entrar em Contato</a>
+            <a class="contact-btn linkedin" href="https://www.linkedin.com/in/luiza-zehnle-psicologia/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="contact-btn google" href="https://share.google/AB3UlR1JRQAgihvtZ" target="_blank" rel="noopener">Google Empresa</a>
+
+            <div class="bio-side-card">
+              <h4>Atendimento</h4>
+              <p>Presencial em Salvador e online para adultos em qualquer lugar do Brasil.</p>
+            </div>
+          </aside>
+
+          <div class="bio-main">
+            <h1 class="bio-title">Luiza Lima Zehnle</h1>
+            <div class="bio-sub">Psicóloga · CRP 03/20324 | Psicologia Analítica</div>
+
+            <p>Sou formada pela Escola Bahiana de Medicina e Saúde Pública e atuo com foco em promover <strong>processos terapêuticos consistentes e acolhedores.</strong> Atuo na clínica há 8 anos e, no início da minha trajetória, realizei atendimentos sociais e para mulheres em situação de violência de gênero através do projeto Justiceiras.</p>
+
+            <p>Segui minha formação com a pós-graduação na Psiquê — Clínica de Psicologia e Centro de Estudos C. G. Jung —, me tornando especialista em Teoria e Psicoterapia Junguiana.</p>
+
+            <p>Além da formação, mantenho estudos com <strong>enfoque na psicologia corporal, na criatividade, na interface entre psicologia, cultura e política, nas especificidades subjetivas de mulheres, e também em relações raciais e psicologia analítica.</strong> Acompanho pessoas interessadas em olhar com atenção para sua vida emocional, se implicando no trabalho de busca em criar condições para reflexão e elaboração, considerando a singularidade e o contexto de cada um.</p>
+
+            <p>Além da clínica, atuei em diferentes contextos: no campo da saúde mental, no CAPS, em escolas, em instituições e também promovendo oficinas grupais. Essas experiências alimentam minha escuta clínica, pois reconheço a importância da cultura, da expressão autêntica e das diferentes construções de subjetividade no processo terapêutico.</p>
+
+            <p>Atuar como psicóloga é vivenciar diferentes realidades através da escuta, e isso me convida à compreensão de que estamos inseridos em uma cultura específica, em uma sociedade e que isto impacta diretamente na construção da saúde mental.</p>
+
+            <p><strong>Acredito que a psicoterapia é um caminho para resgatar sentidos, elaborar sofrimentos e abrir possibilidades.</strong> Meu compromisso é criar um espaço de confiança, onde cada pessoa tenha acolhimento para se escutar e se reinventar.</p>
+
+            <div class="bio-highlight">
+              Os atendimentos podem ser presenciais, em Salvador, ou online, para quem vive em qualquer lugar do Brasil e busca um espaço de escuta profunda, ética e individualizada.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
-      Luiza Lima Zehnle · Psicóloga · CRP 03/20324<br />
-      Atendimento psicológico online para adultos.
+      © 2025 Luiza Lima Zehnle · CRP 03/20324 · Psicologia Analítica · Atendimento online para todo o Brasil
     </footer>
   </div>
 
-  <a href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=float&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20entrevista%20inicial." onclick="return gtag_report_conversion(this.href)" target="_blank" class="float-wpp" aria-label="Abrir WhatsApp para agendar entrevista inicial">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-  </a>
-
   <script>
-    const slides = document.getElementById('testimonialSlides');
-    const dotsWrap = document.getElementById('carouselDots');
-    const prev = document.getElementById('prevSlide');
-    const next = document.getElementById('nextSlide');
+    const homeView = document.getElementById('home-view');
+    const bioView = document.getElementById('bio-view');
+    const navLinks = document.getElementById('navLinks');
 
-    if (slides && dotsWrap && prev && next) {
-      const totalSlides = slides.children.length;
-      let currentSlide = 0;
+    function closeMobileMenu(){
+      if(navLinks){ navLinks.classList.remove('is-open'); }
+    }
 
-      function renderDots(){
-        dotsWrap.innerHTML = '';
-        for(let i = 0; i < totalSlides; i++){
-          const dot = document.createElement('button');
-          dot.className = 'carousel-dot' + (i === currentSlide ? ' active' : '');
-          dot.setAttribute('aria-label', 'Ir para o depoimento ' + (i + 1));
-          dot.addEventListener('click', () => goToSlide(i));
-          dotsWrap.appendChild(dot);
+    function toggleMobileMenu(){
+      if(navLinks){ navLinks.classList.toggle('is-open'); }
+    }
+
+    function showHome(){
+      homeView.classList.remove('is-hidden');
+      homeView.classList.add('is-visible');
+      bioView.classList.remove('is-visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      closeMobileMenu();
+    }
+
+    function showBio(){
+      homeView.classList.add('is-hidden');
+      bioView.classList.add('is-visible');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      closeMobileMenu();
+    }
+
+    function showHomeAndScroll(targetId){
+      homeView.classList.remove('is-hidden');
+      homeView.classList.add('is-visible');
+      bioView.classList.remove('is-visible');
+      closeMobileMenu();
+
+      requestAnimationFrame(() => {
+        const el = document.getElementById(targetId);
+        if(el){
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }
+      });
+    }
 
-      function goToSlide(index){
-        currentSlide = (index + totalSlides) % totalSlides;
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-        renderDots();
-      }
-
-      prev.addEventListener('click', () => goToSlide(currentSlide - 1));
-      next.addEventListener('click', () => goToSlide(currentSlide + 1));
-
-      renderDots();
+    function toggleFaq(btn){
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
     }
   </script>
 </body>
