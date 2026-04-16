@@ -159,12 +159,9 @@
       z-index:2;
     }
 
-    .brand-inline img{
-      width:auto;
-      height:62px;
-      object-fit:contain;
-    }
-
+    .brand-inline{
+  display:none;
+}
     .nav{
       display:flex;
       align-items:center;
@@ -1004,6 +1001,38 @@
   object-fit: contain;
   opacity: 0.95;
 }
+    .hero-shell{
+  padding:24px;
+}
+
+.hero-logo-top{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:18px;
+}
+
+.hero-logo-top img{
+  width:auto;
+  height:120px;
+  object-fit:contain;
+  opacity:0.98;
+}
+
+.nav-full{
+  width:100%;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+.topbar{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:20px;
+  padding:26px 32px 12px;
+}
   </style>
 
   <script>
@@ -1030,14 +1059,18 @@
            com conteúdo da HERO do Código 1
       =========================================== -->
       <section class="hero-shell" id="hero">
-        <div class="hero-card">
+
+  <div class="hero-logo-top">
+    <a href="#" onclick="showHomeAndScroll('hero'); return false;" aria-label="Voltar para o início">
+      <img src="LOGO_LUIZA.png" alt="Luiza Zehnle" fetchpriority="high" />
+    </a>
+  </div>
+
+  <div class="hero-card">
 
           <!-- NAV (Código 2) -->
           <div class="topbar">
-            <a class="brand-inline" href="#" onclick="showHomeAndScroll('hero'); return false;" aria-label="Voltar para o início">
-              <img src="LOGO_LUIZA.png" alt="Luiza Zehnle" fetchpriority="high" />
-            </a>
-            <nav class="nav">
+  <nav class="nav nav-full">
               <button class="mobile-menu-btn" onclick="toggleMobileMenu()">Menu</button>
               <div class="nav-links" id="navLinks">
                 <button class="is-active" onclick="showHomeAndScroll('hero')">Início</button>
