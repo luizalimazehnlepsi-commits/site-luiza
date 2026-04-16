@@ -994,61 +994,197 @@
       .reveal{opacity:1;transform:none}
     }
 
-    @media (min-width:760px){
-      :root{--nav-offset:112px}
-      .site-shell{padding:22px 20px 90px}
-      .hero-shell{padding:22px}
-      .topbar{padding:24px 28px 8px;align-items:center}
-      .brand-inline img{height:60px}
-      .mobile-menu-btn{display:none}
-      .nav{flex-direction:row;align-items:center;gap:6px}
-      .nav-links{
-        position:static;
-        display:flex;
-        min-width:auto;
-        flex-direction:row;
-        gap:2px;
-        padding:0;
-        border:none;
-        box-shadow:none;
-        background:transparent;
-        backdrop-filter:none;
-        -webkit-backdrop-filter:none;
-      }
-      .nav a,.nav button{padding:10px 14px;text-align:center}
-      .hero{
-        grid-template-columns:minmax(0,1.03fr) minmax(300px,.97fr);
-        gap:34px;
-        padding:30px 28px 28px;
-        min-height:620px;
-      }
-      .hero h1{font-size:clamp(3.2rem, 5.6vw, 4.9rem);max-width:8ch;margin-bottom:24px}
-      .hero p{max-width:33ch;font-size:17px;margin-bottom:26px}
-      .hero-actions{flex-direction:row;flex-wrap:wrap;align-items:center}
-      .btn-primary,.btn-ghost{width:auto}
-      .hero-media{width:min(100%, 430px)}
-      .hero-frame img{aspect-ratio:4/5}
-      .section,.cta-final,.detail-inner{padding-left:34px;padding-right:34px}
-      .section{padding-top:72px;padding-bottom:72px}
-      .recon-list,
-      .cards-grid,
-      .depo-grid,
-      .steps-grid{grid-template-columns:1fr 1fr}
-      .service-layout,
-      .sobre-layout,
-      .bio-grid{grid-template-columns:1.08fr .92fr}
-      .bio-grid{gap:30px}
-      .bio-side{position:sticky;top:120px}
-      .bio-photo{max-width:none}
-      .checks{grid-template-columns:repeat(3,1fr)}
-      .faq-trigger{font-size:30px}
-      .bio-title{font-size:50px}
-      .about-photo-wrap{max-width:340px}
-      .about-badge{width:98px;height:98px;top:-18px;right:-18px}
-      .about-badge strong{font-size:32px}
-      .about-badge span{font-size:10px;max-width:66px}
-      .float-wpp{right:22px;bottom:22px;width:58px;height:58px}
-    }
+   @media (min-width:760px){
+  :root{--nav-offset:112px}
+
+  .site-shell{
+    padding:22px 20px 90px;
+  }
+
+  .hero-shell{
+    padding:22px;
+  }
+
+  .topbar{
+    padding:24px 28px 8px;
+    align-items:center;
+  }
+
+  .brand-inline img{
+    height:60px;
+  }
+
+  .mobile-menu-btn{
+    display:none;
+  }
+
+  .nav{
+    flex-direction:row;
+    align-items:center;
+    gap:6px;
+  }
+
+  .nav-links{
+    position:static;
+    display:flex;
+    min-width:auto;
+    flex-direction:row;
+    gap:2px;
+    padding:0;
+    border:none;
+    box-shadow:none;
+    background:transparent;
+    backdrop-filter:none;
+    -webkit-backdrop-filter:none;
+  }
+
+  .nav a,
+  .nav button{
+    padding:10px 14px;
+    text-align:center;
+  }
+
+  .hero-card{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,249,244,0.42) 0%,
+        rgba(255,246,239,0.28) 42%,
+        rgba(255,252,249,0.74) 100%
+      );
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+
+  .hero{
+    grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);
+    gap:42px;
+    padding:30px 28px 20px;
+    min-height:640px;
+  }
+
+  .hero-copy{
+    max-width:520px;
+    padding:10px 0 8px;
+  }
+
+  .hero h1{
+    font-size:clamp(3.4rem, 5.6vw, 5.2rem);
+    line-height:1.01;
+    max-width:7ch;
+    margin-bottom:24px;
+  }
+
+  .hero p{
+    max-width:30ch;
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:22px;
+  }
+
+  .hero-actions{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    margin-bottom:18px;
+  }
+
+  .btn-primary,
+  .btn-ghost{
+    width:auto;
+  }
+
+  .hero-media{
+    width:min(100%, 400px);
+    align-self:end;
+  }
+
+  .hero-frame{
+    border-radius:24px;
+  }
+
+  .hero-frame img{
+    aspect-ratio:4/4.95;
+    object-position:center;
+  }
+
+  .section,
+  .cta-final,
+  .detail-inner{
+    padding-left:34px;
+    padding-right:34px;
+  }
+
+  .section{
+    padding-top:72px;
+    padding-bottom:72px;
+  }
+
+  .recon-list,
+  .cards-grid,
+  .depo-grid,
+  .steps-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .service-layout,
+  .sobre-layout,
+  .bio-grid{
+    grid-template-columns:1.08fr .92fr;
+  }
+
+  .bio-grid{
+    gap:30px;
+  }
+
+  .bio-side{
+    position:sticky;
+    top:120px;
+  }
+
+  .bio-photo{
+    max-width:none;
+  }
+
+  .checks{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .faq-trigger{
+    font-size:30px;
+  }
+
+  .bio-title{
+    font-size:50px;
+  }
+
+  .about-photo-wrap{
+    max-width:340px;
+  }
+
+  .about-badge{
+    width:98px;
+    height:98px;
+    top:-18px;
+    right:-18px;
+  }
+
+  .about-badge strong{
+    font-size:32px;
+  }
+
+  .about-badge span{
+    font-size:10px;
+    max-width:66px;
+  }
+
+  .float-wpp{
+    right:22px;
+    bottom:22px;
+    width:58px;
+    height:58px;
+  }
+}
 
     @media (min-width:1020px){
       .checks{grid-template-columns:repeat(6,1fr)}
