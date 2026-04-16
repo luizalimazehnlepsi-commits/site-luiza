@@ -191,11 +191,20 @@
     }
 
     .brand-inline img{
-      width:auto;
-      height:54px;
-      object-fit:contain;
-      filter:drop-shadow(0 6px 14px rgba(70,40,18,0.08));
-    }
+  width:auto;
+  height:54px;
+  object-fit:contain;
+
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(23%)
+    sepia(18%)
+    saturate(600%)
+    hue-rotate(330deg)
+    brightness(85%)
+    contrast(95%);
+}
 
     .nav{
       position:relative;
