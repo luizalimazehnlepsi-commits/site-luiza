@@ -967,6 +967,94 @@
         height:54px;
       }
     }
+    .hero {
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-inner {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-brand {
+  margin-bottom: 24px;
+  color: white;
+}
+
+.hero-brand img {
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.hero-card {
+  background: #e8d5bd;
+  padding: 48px 32px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #d9e2c7;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  color: #5a4636;
+  margin-bottom: 20px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: #b07a86;
+}
+
+.hero p {
+  max-width: 560px;
+  margin: 0 auto 24px;
+  color: #6b5a4d;
+}
+
+.hero-trust {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.hero-trust span {
+  background: #f2e6d8;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #6f8b6b;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
   </style>
 
   <script>
@@ -1006,27 +1094,49 @@
             </nav>
           </div>
 
-          <section class="hero">
-            <div class="hero-copy">
-              <span class="eyebrow">Psicoterapia presencial e online</span>
-              <h1>Estar mais perto de si é um caminho que faz sentido</h1>
-              <p>
-                A psicoterapia pode ser um espaço de escuta profunda para olhar com mais calma para aquilo que se repete, pesa, confunde ou pede elaboração.
-              </p>
+         <section class="hero">
+  <div class="hero-inner">
 
-              <div class="hero-actions">
-                <a class="btn-primary" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20primeira%20conversa." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">
-                  Agendar primeira conversa
-                </a>
-                <a class="btn-secondary" href="#sobre-resumo" onclick="showHomeAndScroll('sobre-resumo'); return false;">Conhecer mais sobre meu trabalho</a>
-              </div>
+    <!-- Logo acima do card -->
+    <div class="hero-brand">
+      <img src="assets/logo-white.svg" alt="Luiza Lima Zehnle" />
+      <span>Psicologia analítica</span>
+    </div>
 
-              <div class="hero-trust">
-                <span>8 anos de experiência</span>
-                <span>CRP 03/20324</span>
-                <span>Atendimento online e presencial</span>
-              </div>
-            </div>
+    <!-- Card -->
+    <div class="hero-card">
+
+      <span class="hero-badge">Psicoterapia junguiana profunda online</span>
+
+      <h1>
+        Estar mais perto de si<br>
+        é um caminho que<br>
+        <em>faz sentido</em>
+      </h1>
+
+      <p>
+        A psicoterapia pode ser um espaço de escuta profunda para olhar com mais calma para aquilo que se repete, pesa, confunde ou pede elaboração.
+      </p>
+
+      <div class="hero-trust">
+        <span>CRP 03/20324</span>
+        <span>8 anos de experiência</span>
+        <span>Atendimento online</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn-primary" 
+           href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20primeira%20conversa."
+           onclick="return gtag_report_conversion(this.href)" 
+           target="_blank" 
+           rel="noopener">
+          Agendar conversa inicial
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
 
             <div class="hero-media">
               <div class="hero-frame">
