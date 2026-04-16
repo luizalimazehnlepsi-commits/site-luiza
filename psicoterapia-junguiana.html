@@ -1692,6 +1692,318 @@
   }
 
 }
+   /* ===== HERO NOVA ===== */
+
+.hero.hero-new{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  gap:0 !important;
+  min-height:980px !important;
+  padding:26px 22px 0 !important;
+  border-radius:30px !important;
+  overflow:hidden !important;
+  isolation:isolate !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,250,246,0.84) 0%,
+      rgba(255,248,244,0.68) 20%,
+      rgba(255,247,243,0.40) 48%,
+      rgba(255,247,243,0.10) 72%,
+      rgba(255,247,243,0.00) 100%
+    ) !important;
+  backdrop-filter:blur(10px) !important;
+  -webkit-backdrop-filter:blur(10px) !important;
+  border:none !important;
+  box-shadow:none !important;
+}
+
+.hero.hero-new::before{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.34), rgba(255,255,255,0.08) 30%, rgba(255,255,255,0.00) 100%),
+    radial-gradient(circle at 50% 8%, rgba(255,255,255,0.34), transparent 34%) !important;
+  pointer-events:none !important;
+  z-index:1 !important;
+}
+
+.hero-new-bg{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:0 !important;
+  background:
+    linear-gradient(180deg, rgba(244,237,232,0.18), rgba(230,220,212,0.08)),
+    url('bg_1.jpeg') center center / cover no-repeat !important;
+  opacity:.95 !important;
+  transform:scale(1.02) !important;
+}
+
+.hero-new-top,
+.hero-new-content,
+.hero-new-image{
+  position:relative !important;
+  z-index:2 !important;
+}
+
+.hero-new-top{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:18px !important;
+  padding-top:18px !important;
+  text-align:center !important;
+}
+
+.hero-new-eyebrow{
+  position:relative !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  color:#b07c62 !important;
+  font-size:13px !important;
+  font-weight:500 !important;
+  letter-spacing:0 !important;
+  text-transform:none !important;
+  margin-bottom:0 !important;
+  padding:0 18px !important;
+}
+
+.hero-new-eyebrow::before,
+.hero-new-eyebrow::after{
+  content:'' !important;
+  width:72px !important;
+  height:1px !important;
+  background:linear-gradient(90deg, rgba(202,170,150,0), rgba(202,170,150,.55), rgba(202,170,150,0)) !important;
+  display:block !important;
+  margin:0 14px !important;
+}
+
+.hero-new-brand{
+  display:flex !important;
+  justify-content:center !important;
+}
+
+.hero-new-brand img{
+  height:54px !important;
+  width:auto !important;
+  object-fit:contain !important;
+}
+
+.hero-new-content{
+  max-width:760px !important;
+  margin:34px auto 0 !important;
+  text-align:center !important;
+  padding:0 12px !important;
+}
+
+.hero.hero-new h1{
+  max-width:10ch !important;
+  margin:0 auto 20px !important;
+  font-family:'Playfair Display',serif !important;
+  font-size:clamp(3.1rem, 7vw, 5.2rem) !important;
+  line-height:1.02 !important;
+  letter-spacing:-0.04em !important;
+  color:#6e4d40 !important;
+}
+
+.hero.hero-new p{
+  max-width:23ch !important;
+  margin:0 auto 28px !important;
+  font-size:clamp(1.1rem, 2vw, 1.6rem) !important;
+  line-height:1.45 !important;
+  color:#765b50 !important;
+  font-weight:400 !important;
+}
+
+.hero-new-actions{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:0 !important;
+}
+
+.hero-new-cta{
+  min-width:min(100%, 420px) !important;
+  width:min(100%, 420px) !important;
+  min-height:70px !important;
+  padding:18px 28px !important;
+  border-radius:22px !important;
+  background:#c99558 !important;
+  color:#fff !important;
+  font-size:clamp(1.1rem, 2vw, 1.35rem) !important;
+  font-weight:500 !important;
+  box-shadow:0 14px 30px rgba(124,83,45,0.16) !important;
+}
+
+.hero-new-cta:hover{
+  background:#bc8750 !important;
+  transform:translateY(-1px) !important;
+}
+
+.hero-new-meta{
+  margin-top:-8px !important;
+  padding:18px 26px 16px !important;
+  border-radius:0 0 22px 22px !important;
+  background:rgba(255,246,240,0.70) !important;
+  backdrop-filter:blur(10px) !important;
+  -webkit-backdrop-filter:blur(10px) !important;
+  color:#7a5b4c !important;
+  font-size:clamp(1rem, 1.8vw, 1.15rem) !important;
+  line-height:1.4 !important;
+  border:1px solid rgba(255,255,255,0.32) !important;
+  border-top:none !important;
+  box-shadow:0 10px 24px rgba(90,60,35,0.08) !important;
+}
+
+.hero-new-image{
+  width:min(100%, 640px) !important;
+  height:520px !important;
+  margin:38px 0 0 auto !important;
+  border-radius:34px 34px 0 34px !important;
+  overflow:hidden !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00)),
+    url('luiza-atendendo.webp') center center / cover no-repeat !important;
+  box-shadow:0 22px 50px rgba(70,40,20,0.14) !important;
+}
+
+.hero-new-image::after{
+  content:'' !important;
+  position:absolute !important;
+  inset:0 !important;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00) 45%, rgba(255,255,255,0.10) 100%) !important;
+  pointer-events:none !important;
+}
+
+.hero-new-bottom-fade{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  height:38% !important;
+  z-index:1 !important;
+  pointer-events:none !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(215,168,88,0) 0%,
+      rgba(215,168,88,0.10) 22%,
+      rgba(215,168,88,0.22) 44%,
+      rgba(215,168,88,0.38) 68%,
+      rgba(215,168,88,0.56) 100%
+    ) !important;
+}
+
+/* reduz interferência da hero antiga */
+.hero.hero-new .hero-copy,
+.hero.hero-new .hero-media,
+.hero.hero-new .hero-frame,
+.hero.hero-new .hero-actions,
+.hero.hero-new .hero-trust,
+.hero.hero-new .cta-note{
+  all:unset;
+}
+
+/* desktop */
+@media (min-width: 761px){
+  .hero.hero-new{
+    min-height:1120px !important;
+    padding:34px 28px 0 !important;
+  }
+
+  .hero-new-top{
+    padding-top:24px !important;
+    gap:22px !important;
+  }
+
+  .hero-new-brand img{
+    height:62px !important;
+  }
+
+  .hero-new-content{
+    margin-top:44px !important;
+  }
+
+  .hero-new-image{
+    width:min(100%, 700px) !important;
+    height:610px !important;
+    margin-top:52px !important;
+    border-radius:38px 38px 0 38px !important;
+  }
+}
+
+/* mobile */
+@media (max-width: 760px){
+  .hero.hero-new{
+    min-height:860px !important;
+    padding:22px 16px 0 !important;
+    border-radius:28px !important;
+  }
+
+  .hero-new-top{
+    gap:16px !important;
+    padding-top:10px !important;
+  }
+
+  .hero-new-eyebrow{
+    font-size:12px !important;
+    padding:0 4px !important;
+  }
+
+  .hero-new-eyebrow::before,
+  .hero-new-eyebrow::after{
+    width:38px !important;
+    margin:0 8px !important;
+  }
+
+  .hero-new-brand img{
+    height:42px !important;
+  }
+
+  .hero.hero-new h1{
+    max-width:9ch !important;
+    font-size:clamp(2.55rem, 11vw, 4rem) !important;
+    margin-bottom:16px !important;
+  }
+
+  .hero.hero-new p{
+    max-width:20ch !important;
+    font-size:1.15rem !important;
+    line-height:1.42 !important;
+    margin-bottom:22px !important;
+  }
+
+  .hero-new-cta{
+    width:100% !important;
+    min-height:62px !important;
+    border-radius:18px !important;
+    font-size:1.05rem !important;
+  }
+
+  .hero-new-meta{
+    width:calc(100% - 16px) !important;
+    font-size:.98rem !important;
+    padding:14px 16px 14px !important;
+    border-radius:0 0 18px 18px !important;
+  }
+
+  .hero-new-image{
+    width:78% !important;
+    min-width:250px !important;
+    height:360px !important;
+    margin-top:34px !important;
+    border-radius:28px 28px 0 28px !important;
+  }
+
+  .hero-new-bottom-fade{
+    height:34% !important;
+  }
+}
   </style>
 
   <script>
@@ -1731,33 +2043,43 @@
             </nav>
           </div>
 
-          <section class="hero">
-            <div class="hero-copy reveal">
-              <span class="eyebrow">Presencial e online</span>
-              <h1>Estar mais perto de si é um caminho que faz sentido</h1>
-              <p>A psicoterapia é um espaço de escuta profunda para compreender o que se repete e pede elaboração.</p>
+        <section class="hero hero-new">
+  <div class="hero-new-bg"></div>
 
-              <div class="hero-actions">
-                <a class="btn-primary" href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20primeira%20conversa." onclick="return gtag_report_conversion(this.href)" target="_blank" rel="noopener">
-                  Agendar primeira conversa no WhatsApp
-                </a>
-                <a class="btn-secondary" href="#sobre-resumo" onclick="showHomeAndScroll('sobre-resumo'); return false;">Conhecer mais sobre meu trabalho</a>
-              </div>
+  <div class="hero-new-top reveal">
+    <span class="eyebrow hero-new-eyebrow">Agende sua sessão online</span>
 
-              <div class="hero-trust">
-                <span>CRP 03/20324</span>
-                <span>8 anos de experiência</span>
-                <span>Atendimento online e presencial</span>
-              </div>
-              <div class="cta-note">Resposta direta no WhatsApp · Sigilo garantido</div>
-            </div>
+    <a class="brand-inline hero-new-brand" href="#" onclick="showHomeAndScroll('hero'); return false;" aria-label="Voltar para a página inicial">
+      <img src="LOGO_LUIZA.png" alt="Luiza Lima Zehnle" fetchpriority="high" />
+    </a>
+  </div>
 
-            <div class="hero-media reveal">
-              <div class="hero-frame">
-                <img src="luiza-atendendo.webp" alt="Poltrona de atendimento da clínica" />
-              </div>
-            </div>
-          </section>
+  <div class="hero-new-content reveal">
+    <h1>Agende sua primeira sessão de psicoterapia</h1>
+    <p>
+      Um espaço de escuta profunda para compreender melhor suas emoções,
+      repetições e travessias com ética, presença e cuidado.
+    </p>
+
+    <div class="hero-new-actions">
+      <a class="btn-primary hero-new-cta"
+         href="https://wa.me/557199983483?utm_source=google&utm_medium=cpc&utm_campaign=psicoterapia_brasil&utm_content=hero_novo&text=Olá,%20Luiza.%20Gostaria%20de%20agendar%20uma%20primeira%20conversa."
+         onclick="return gtag_report_conversion(this.href)"
+         target="_blank"
+         rel="noopener">
+        Agendar sessão online
+      </a>
+
+      <div class="hero-new-meta">
+        Psicoterapia Junguiana · CRP 03/20324
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-new-image reveal" aria-hidden="true"></div>
+
+  <div class="hero-new-bottom-fade"></div>
+</section>
         </div>
       </section>
 
