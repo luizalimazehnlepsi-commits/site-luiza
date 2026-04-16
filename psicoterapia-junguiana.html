@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="bg_1.jpeg" />
-  <style>
+
+<style>
 :root{
   --bg:#d7a858;
   --ink:#4a392f;
@@ -264,16 +265,21 @@ button{font:inherit}
   transform:translateY(-1px);
 }
 
-.hero{
-  position:relative;
-  z-index:2;
-}
-
+/* ─── hero antiga: oculta ─── */
 .hero:not(.hero-new){
   display:none !important;
 }
 
-/* ===== HERO NOVA FINAL ===== */
+/* ─────────────────────────────────────────
+   HERO NOVA — versão final corrigida
+   Lógica:
+   • O próprio .hero.hero-new tem fundo branco-quente opaco no topo,
+     fundindo rapidamente para transparente (~35–40%).
+   • ::before carrega a imagem de fundo com opacidade baixa,
+     sem nenhuma camada branca sobreposta — a imagem aparece sozinha.
+   • ::after não existe / não adiciona névoa.
+   • Resultado: branco→transparente (fundo visível), sem "buraco branco" no meio.
+───────────────────────────────────────── */
 
 .hero.hero-new{
   position:relative;
@@ -285,65 +291,63 @@ button{font:inherit}
   border-radius:30px;
   overflow:hidden;
   isolation:isolate;
+
+  /* camada de branco-quente no topo, some rápido */
   background:
     linear-gradient(
       180deg,
-      rgba(255,252,249,0.96) 0%,
-      rgba(255,251,248,0.92) 18%,
-      rgba(255,250,246,0.64) 32%,
-      rgba(255,248,244,0.22) 48%,
-      rgba(255,246,241,0.06) 64%,
-      rgba(255,245,240,0.00) 100%
+      rgba(255,252,249,1.00)  0%,
+      rgba(255,252,249,0.97)  8%,
+      rgba(255,251,248,0.88) 16%,
+      rgba(255,250,246,0.60) 26%,
+      rgba(255,249,245,0.22) 36%,
+      rgba(255,248,244,0.00) 46%
     );
+
   border:1px solid rgba(255,255,255,0.42);
   box-shadow:none;
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
 }
 
+/* imagem de fundo: aparece a partir do meio, sem camadas brancas */
 .hero.hero-new::before{
   content:'';
   position:absolute;
   inset:0;
   z-index:0;
   pointer-events:none;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,0.00) 0%,
-      rgba(255,255,255,0.00) 18%,
-      rgba(255,255,255,0.06) 30%,
-      rgba(255,255,255,0.16) 42%,
-      rgba(255,255,255,0.28) 54%,
-      rgba(255,255,255,0.44) 66%,
-      rgba(255,255,255,0.66) 80%,
-      rgba(255,255,255,0.86) 100%
-    ),
-    url('bg_1.jpeg') center bottom / cover no-repeat;
-  opacity:.82;
+  background:url('bg_1.jpeg') center 30% / cover no-repeat;
+  /* máscara: transparente no topo (branco já cobre), aparece a partir de ~30% */
+  -webkit-mask-image:linear-gradient(
+    180deg,
+    transparent  0%,
+    transparent 32%,
+    rgba(0,0,0,0.18) 40%,
+    rgba(0,0,0,0.55) 55%,
+    rgba(0,0,0,0.82) 72%,
+    rgba(0,0,0,0.92) 100%
+  );
+  mask-image:linear-gradient(
+    180deg,
+    transparent  0%,
+    transparent 32%,
+    rgba(0,0,0,0.18) 40%,
+    rgba(0,0,0,0.55) 55%,
+    rgba(0,0,0,0.82) 72%,
+    rgba(0,0,0,0.92) 100%
+  );
+  opacity:.55;
   transform:scale(1.02);
 }
 
+/* sem ::after — eliminado para não gerar névoa branca no meio */
 .hero.hero-new::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  z-index:1;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,252,249,0.92) 0%,
-      rgba(255,252,249,0.72) 11%,
-      rgba(255,251,247,0.34) 22%,
-      rgba(255,250,246,0.10) 31%,
-      rgba(255,249,245,0.00) 40%
-    );
-}
-
-.hero-new-bg{
   display:none;
 }
+
+/* elementos internos ficam acima do fundo */
+.hero-new-bg{display:none}
 
 .hero-new-top,
 .hero-new-content,
@@ -493,7 +497,7 @@ button{font:inherit}
   background:transparent;
 }
 
-/* evita heranças da hero antiga */
+/* reset herança da hero antiga */
 .hero.hero-new .hero-copy,
 .hero.hero-new .hero-media,
 .hero.hero-new .hero-frame,
@@ -502,6 +506,8 @@ button{font:inherit}
 .hero.hero-new .cta-note{
   all:unset;
 }
+
+/* ─── seções ─── */
 
 .section{
   padding:54px 20px;
@@ -863,7 +869,7 @@ button{font:inherit}
 }
 
 .depo-card::before{
-  content:'“';
+  content:'"';
   position:absolute;
   top:8px;
   right:16px;
@@ -1125,29 +1131,20 @@ button{font:inherit}
   .reveal{opacity:1;transform:none}
 }
 
+/* ─── desktop ─── */
 @media (min-width:760px){
   :root{--nav-offset:112px}
 
-  .site-shell{
-    padding:22px 20px 90px;
-  }
-
-  .hero-shell{
-    padding:22px;
-  }
+  .site-shell{padding:22px 20px 90px}
+  .hero-shell{padding:22px}
 
   .topbar{
     padding:24px 28px 8px;
     align-items:center;
   }
 
-  .brand-inline img{
-    height:60px;
-  }
-
-  .mobile-menu-btn{
-    display:none;
-  }
+  .brand-inline img{height:60px}
+  .mobile-menu-btn{display:none}
 
   .nav{
     flex-direction:row;
@@ -1190,44 +1187,27 @@ button{font:inherit}
   .recon-list,
   .cards-grid,
   .depo-grid,
-  .steps-grid{
-    grid-template-columns:1fr 1fr;
-  }
+  .steps-grid{grid-template-columns:1fr 1fr}
 
   .service-layout,
   .sobre-layout,
-  .bio-grid{
-    grid-template-columns:1.08fr .92fr;
-  }
+  .bio-grid{grid-template-columns:1.08fr .92fr}
 
-  .bio-grid{
-    gap:30px;
-  }
+  .bio-grid{gap:30px}
 
   .bio-side{
     position:sticky;
     top:120px;
   }
 
-  .bio-photo{
-    max-width:none;
-  }
+  .bio-photo{max-width:none}
 
-  .checks{
-    grid-template-columns:repeat(3,1fr);
-  }
+  .checks{grid-template-columns:repeat(3,1fr)}
 
-  .faq-trigger{
-    font-size:30px;
-  }
+  .faq-trigger{font-size:30px}
+  .bio-title{font-size:50px}
 
-  .bio-title{
-    font-size:50px;
-  }
-
-  .about-photo-wrap{
-    max-width:340px;
-  }
+  .about-photo-wrap{max-width:340px}
 
   .about-badge{
     width:98px;
@@ -1236,14 +1216,8 @@ button{font:inherit}
     right:-18px;
   }
 
-  .about-badge strong{
-    font-size:32px;
-  }
-
-  .about-badge span{
-    font-size:10px;
-    max-width:66px;
-  }
+  .about-badge strong{font-size:32px}
+  .about-badge span{font-size:10px;max-width:66px}
 
   .float-wpp{
     right:22px;
@@ -1257,17 +1231,9 @@ button{font:inherit}
     padding:34px 28px 0;
   }
 
-  .hero-new-top{
-    padding-top:24px;
-  }
-
-  .hero-new-brand img{
-    height:62px;
-  }
-
-  .hero-new-content{
-    margin-top:46px;
-  }
+  .hero-new-top{padding-top:24px}
+  .hero-new-brand img{height:62px}
+  .hero-new-content{margin-top:46px}
 
   .hero-new-image{
     width:min(100%, 700px);
@@ -1283,20 +1249,14 @@ button{font:inherit}
   .cta-final h2{font-size:clamp(2.8rem, 4.4vw, 4.2rem)}
 }
 
+/* ─── mobile ─── */
 @media (max-width:760px){
   :root{--nav-offset:96px}
 
-  .site-shell{
-    padding:14px 12px 90px;
-  }
+  .site-shell{padding:14px 12px 90px}
 
-  .topbar{
-    padding:18px 18px 8px;
-  }
-
-  .brand-inline img{
-    height:56px;
-  }
+  .topbar{padding:18px 18px 8px}
+  .brand-inline img{height:56px}
 
   .section,
   .cta-final,
@@ -1310,13 +1270,8 @@ button{font:inherit}
     padding-bottom:58px;
   }
 
-  .faq-trigger{
-    font-size:25px;
-  }
-
-  .bio-title{
-    font-size:40px;
-  }
+  .faq-trigger{font-size:25px}
+  .bio-title{font-size:40px}
 
   .float-wpp{
     right:16px;
@@ -1347,9 +1302,7 @@ button{font:inherit}
     margin:0 8px;
   }
 
-  .hero-new-brand img{
-    height:44px;
-  }
+  .hero-new-brand img{height:44px}
 
   .hero.hero-new h1{
     max-width:8.8ch;
@@ -1386,12 +1339,10 @@ button{font:inherit}
     border-radius:28px 28px 0 28px;
   }
 
-  .hero-new-bottom-fade{
-    height:36%;
-  }
+  .hero-new-bottom-fade{height:36%}
 }
 </style>
-
+  
   <script>
     function gtag_report_conversion(url) {
       var callback = function () {
