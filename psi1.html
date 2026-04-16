@@ -989,6 +989,69 @@ details[open] summary::after{
     line-height: 1.6;
   }
 }
+  .section-head{
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+.eyebrow{
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.section-title{
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--title);
+  margin-bottom: 14px;
+}
+
+.section-copy{
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+.recon-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.recon-card{
+  background: rgba(255,255,255,0.38);
+  border: 1px solid rgba(93,67,50,0.12);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 12px 28px rgba(60,30,10,0.08);
+}
+
+.recon-card strong{
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: var(--title);
+}
+
+.recon-card p{
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+/* desktop */
+@media (min-width: 700px){
+  .recon-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
 </style>
 
   <script>
