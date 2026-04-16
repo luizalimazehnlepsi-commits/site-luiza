@@ -992,6 +992,27 @@
         height:52px;
       }
     }
+    .hero-card{
+  position:relative;
+}
+
+.topbar{
+  justify-content:flex-end;
+}
+
+.hero-logo{
+  position:absolute;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+}
+
+.hero-logo img{
+  height:90px;
+  width:auto;
+  object-fit:contain;
+}
   </style>
 
   <script>
@@ -1021,21 +1042,22 @@
         <div class="hero-card">
 
           <!-- NAV (Código 2) -->
-          <div class="topbar">
-            <a class="brand-inline" href="#" onclick="showHomeAndScroll('hero'); return false;" aria-label="Voltar para o início">
-              <img src="LOGO_LUIZA.png" alt="Luiza Zehnle" fetchpriority="high" />
-            </a>
-            <nav class="nav">
-              <button class="mobile-menu-btn" onclick="toggleMobileMenu()">Menu</button>
-              <div class="nav-links" id="navLinks">
-                <button class="is-active" onclick="showHomeAndScroll('hero')">Início</button>
-                <a href="#abordagem" onclick="showHomeAndScroll('abordagem'); return false;">Abordagem</a>
-                <a href="#sobre-resumo" onclick="showHomeAndScroll('sobre-resumo'); return false;">Sobre Mim</a>
-                <a href="#faq" onclick="showHomeAndScroll('faq'); return false;">FAQ</a>
-                <a href="#contato" onclick="showHomeAndScroll('contato'); return false;">Contato</a>
-              </div>
-            </nav>
-          </div>
+         <div class="topbar">
+  <div class="hero-logo">
+    <img src="LOGO_LUIZA.png" alt="Luiza Zehnle" />
+  </div>
+
+  <nav class="nav">
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <button class="is-active" onclick="showHomeAndScroll('hero')">Início</button>
+      <a href="#abordagem" onclick="showHomeAndScroll('abordagem'); return false;">Abordagem</a>
+      <a href="#sobre-resumo" onclick="showHomeAndScroll('sobre-resumo'); return false;">Sobre Mim</a>
+      <a href="#faq" onclick="showHomeAndScroll('faq'); return false;">FAQ</a>
+      <a href="#contato" onclick="showHomeAndScroll('contato'); return false;">Contato</a>
+    </div>
+  </nav>
+</div>
 
           <!-- HERO (conteúdo do Código 1) -->
           <div class="hero">
